@@ -20,7 +20,7 @@ DEPLOY
 
 HOW THE LINKS WORK
   Site  → guide   the 10 list links to each guide by filename
-  Guide → site    "← GoFit X" (top left) returns to the 09 guides list
+  Guide → site    "← GoFit X" (top left) returns to the 10 guides list
   Guide → site    "Finish" on the last step returns to the home menu
   Guide → guide   registration guides end by linking to the app tutorial
 

@@ -2,24 +2,24 @@ GoFit X Geylang — website + member guides
 =========================================
 
 CONTENTS
-  index.html                                the site (menu items 01–09)
-  mobile-app-tutorial.html                  09 › GOFIT APP TUTORIAL
-  guest-registration-tutorial.html          09 › TRIAL REGISTRATION
-  plus-upgrade-tutorial.html                09 › UPGRADE TO PLUS
-  voucher-new-membership-activation.html    09 › NEW TERM MEMBERSHIP REGISTRATION
-  voucher-membership-renewal.html           09 › TERM MEMBERSHIP RENEWAL
-  lazada-new-membership-activation.html     09 › LAZADA PURCHASED TERM REGISTRATION
-  lazada-membership-renewal.html            09 › LAZADA PURCHASED TERM RENEWAL
+  index.html                                the site (menu items 01–10)
+  mobile-app-tutorial.html                  10 › GOFIT APP TUTORIAL
+  guest-registration-tutorial.html          10 › TRIAL REGISTRATION
+  plus-upgrade-tutorial.html                10 › UPGRADE TO PLUS
+  voucher-new-membership-activation.html    10 › NEW TERM MEMBERSHIP REGISTRATION
+  voucher-membership-renewal.html           10 › TERM MEMBERSHIP RENEWAL
+  lazada-new-membership-activation.html     10 › LAZADA PURCHASED TERM REGISTRATION
+  lazada-membership-renewal.html            10 › LAZADA PURCHASED TERM RENEWAL
 
   Every file is self-contained — all photos and screenshots are embedded.
   No external image hosts. Nothing depends on Wix.
 
 DEPLOY
   Drag this folder onto netlify.com/drop, or connect it to Cloudflare
-  Pages. No build step. Keep all eight files in the same folder.
+  Pages. No build step. Keep all files in the same folder.
 
 HOW THE LINKS WORK
-  Site  → guide   the 09 list links to each guide by filename
+  Site  → guide   the 10 list links to each guide by filename
   Guide → site    "← GoFit X" (top left) returns to the 09 guides list
   Guide → site    "Finish" on the last step returns to the home menu
   Guide → guide   registration guides end by linking to the app tutorial
@@ -35,7 +35,7 @@ HOW THE LINKS WORK
 GUIDES ARE UNLISTED
   Each guide is noindex,nofollow with a canonical URL set. They do not
   appear in search results — they are meant to be sent by link. They are
-  reachable from menu 09 if a member goes looking.
+  reachable from menu 10 if a member goes looking.
 
 EDITING
   index.html   MENU, GUIDES, MEMBERSHIPS, PASSES, PT, FLOORS, CLASSES,

@@ -11,8 +11,12 @@ CONTENTS
   lazada-new-membership-activation.html     10 › LAZADA PURCHASED TERM REGISTRATION
   lazada-membership-renewal.html            10 › LAZADA PURCHASED TERM RENEWAL
 
-  Every file is self-contained — all photos and screenshots are embedded.
-  No external image hosts. Nothing depends on Wix.
+  img/                                      all photos, screenshots, logo, icons
+  robots.txt, sitemap.xml, favicon.ico      search engine files — keep at the root
+
+  Photos and screenshots live in img/ (self-hosted, no external image
+  hosts). Nothing depends on Wix. Upload img/ together with the pages.
+  The PT pages (pt-*.html) still embed their own photos.
 
 DEPLOY
   Drag this folder onto netlify.com/drop, or connect it to Cloudflare
@@ -20,7 +24,7 @@ DEPLOY
 
 HOW THE LINKS WORK
   Site  → guide   the 10 list links to each guide by filename
-  Guide → site    "← GoFit X" (top left) returns to the 10 guides list
+  Guide → site    "← GoFit X" (top left) returns to the 09 guides list
   Guide → site    "Finish" on the last step returns to the home menu
   Guide → guide   registration guides end by linking to the app tutorial
 
@@ -39,5 +43,9 @@ GUIDES ARE UNLISTED
 
 EDITING
   index.html   MENU, GUIDES, MEMBERSHIPS, PASSES, PT, FLOORS, CLASSES,
-               FAQS, TCS — all near the top of the script
+               TCS — all near the top of the script
+               FAQs are plain HTML in the QUESTIONS section (id="faqList").
+               When you edit a FAQ, edit the matching Question in the
+               JSON-LD in <head> too — the two must say the same thing.
+  sitemap.xml  add any new indexable page; update <lastmod> on changes
   guides       GUIDE (title, intro, time) and STEPS — same place

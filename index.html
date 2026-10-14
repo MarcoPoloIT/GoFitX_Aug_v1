@@ -453,6 +453,8 @@ body{background:#000;color:#fff;font-family:var(--body);
   .strip{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 
+a.mi,a.rmi{text-decoration:none}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <script type="application/ld+json">
@@ -814,58 +816,6 @@ body{background:#000;color:#fff;font-family:var(--body);
     </div>
   </section>
 
-  <!-- ============ MEMBERSHIPS ============ -->
-  <section class="screen" id="memberships">
-    <div class="sechead"><button class="back"><span class="arrow">←</span>Menu</button></div>
-    <div class="sectitle">
-      <h2 class="agile" data-agile="MEMBERSHIPS"><span class="pre">MEMBERSHIPS</span></h2>
-      <p class="kick">No joining fee, no admin fee, no keycard fee. Every plan includes all five floors, unlimited group classes and free parking.</p>
-    </div>
-    <div class="list" id="listMemberships"></div>
-  </section>
-
-  <!-- ============ VISITOR PASSES ============ -->
-  <section class="screen" id="passes">
-    <div class="sechead"><button class="back"><span class="arrow">←</span>Menu</button></div>
-    <div class="sectitle">
-      <h2 class="agile" data-agile="VISITOR PASSES"><span class="pre">VISITOR PASSES</span></h2>
-      <p class="kick">In town for a few days? Train today. Card payment online, or pay at the desk during staffed hours. Instructions arrive by email.</p>
-    </div>
-    <div class="list" id="listPasses"></div>
-  </section>
-
-  <!-- ============ WHAT YOU GET ============ -->
-  <section class="screen" id="included">
-    <div class="sechead"><button class="back"><span class="arrow">←</span>Menu</button></div>
-    <div class="sectitle">
-      <h2 class="agile" data-agile="WHAT YOU GET"><span class="pre">WHAT YOU GET</span></h2>
-      <p class="kick">Six levels. Five of them yours to train on.</p>
-    </div>
-    <div id="floorList" style="margin-bottom:24px"></div>
-    <div class="list">
-      <div id="factList" style="margin-bottom:22px"></div>
-      <div class="block">
-        <span class="tagline">The building</span>
-        <h3>Five floors, 12,000 sq ft</h3>
-        <p>Free weights, machine weights, cardio, a GX studio and fitness games floor, outdoor training balconies, and chill and sleep recovery zones. Showers and lockers on every floor — bring your own towel.</p>
-      </div>
-      <div class="block">
-        <span class="tagline">Recovery</span>
-        <h3>HydroMassage &amp; sports massage</h3>
-        <p>Singapore's only HydroMassage loungers, plus an in-house sports massage clinic. Complimentary Evolt 360 body composition scans with personal training packages.</p>
-      </div>
-      <div class="block">
-        <span class="tagline">The kit</span>
-        <h3>60+ professional machines</h3>
-        <div class="chips">
-          <span class="chip">Nautilus</span><span class="chip">Star Trac</span><span class="chip">StairMaster</span>
-          <span class="chip">Stages</span><span class="chip">Throwdown</span><span class="chip">Ziva</span>
-          <span class="chip">Evolt 360</span><span class="chip">Fittar mirrors</span><span class="chip">HydroMassage</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ CLASSES ============ -->
   <section class="screen" id="classes">
     <div class="sechead"><button class="back"><span class="arrow">←</span>Menu</button></div>
@@ -874,16 +824,6 @@ body{background:#000;color:#fff;font-family:var(--body);
       <p class="kick">Included with every membership and visitor pass. Rooftop HIIT, movement, express sessions. All levels welcome.</p>
     </div>
     <div class="list" id="classList"></div>
-  </section>
-
-  <!-- ============ PERSONAL TRAINING ============ -->
-  <section class="screen" id="pt">
-    <div class="sechead"><button class="back"><span class="arrow">←</span>Menu</button></div>
-    <div class="sectitle">
-      <h2 class="agile" data-agile="X-PERT COACHING"><span class="pre">X-PERT COACHING</span></h2>
-      <p class="kick">Fat loss, rehab or performance. Our X-Perts build the programme around you, and the more sessions you take the less each one costs.</p>
-    </div>
-    <div class="list" id="listPT"></div>
   </section>
 
   <!-- ============ PLUS UPGRADE ============ -->
@@ -965,13 +905,6 @@ body{background:#000;color:#fff;font-family:var(--body);
     <span class="ico" data-ico="pin"></span><span class="lbl">Directions</span></a>
 </div>
 
-<!-- ============ LIGHTBOX ============ -->
-<div id="lb" role="dialog" aria-modal="true">
-  <div class="lbtop"><div class="lbt" id="lbTitle"></div><button class="lbx" id="lbClose">CLOSE ✕</button></div>
-  <div class="lbstrip" id="lbStrip"></div>
-  <div class="lbcap" id="lbCap"></div>
-</div>
-
 <!-- ============ T&C MODAL ============ -->
 <div id="modal" role="dialog" aria-modal="true">
   <div class="sheet">
@@ -1033,38 +966,17 @@ function wa(msg){return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(m
 
 var MENU=[
   {id:'visit',n:'01',t:'VISIT US',d:'Address, hours, free tour'},
-  {id:'memberships',n:'02',t:'MEMBERSHIPS',d:'From $89 a month, no joining fee'},
-  {id:'passes',n:'03',t:'VISITOR PASSES',d:'1 day $28 · 7 days $100'},
-  {id:'included',n:'04',t:'WHAT YOU GET',d:'Five floors, 60+ machines, recovery'},
+  {id:'memberships',href:'/our-membership-plans',n:'02',t:'MEMBERSHIPS',d:'From $89 a month, no joining fee'},
+  {id:'passes',href:'/visitor-passes',n:'03',t:'VISITOR PASSES',d:'1 day $28 · 7 days $100'},
+  {id:'included',href:'/our-equipments',n:'04',t:'WHAT YOU GET',d:'Five floors, 60+ machines, recovery'},
   {id:'classes',n:'05',t:'FREE CLASSES',d:'Rooftop HIIT, Animal Flow and more'},
-  {id:'pt',n:'06',t:'PERSONAL TRAINING',d:'1-to-1 coaching from $65 an hour'},
+  {id:'pt',href:'/personal-training',n:'06',t:'PERSONAL TRAINING',d:'1-to-1 coaching from $65 an hour'},
   {id:'plus',n:'07',t:'PLUS UPGRADE',d:'All clubs, recovery and a locker · $15 a month'},
   {id:'faq',n:'08',t:'QUESTIONS',d:'Parking, showers, access, trials'},
   {id:'connect',n:'09',t:'APP &amp; SOCIAL',d:'Door code in your pocket'},
   {id:'guides',n:'10',t:'HOW TO GUIDES',d:'Step-by-step help for members'}
 ];
 
-var MEMBERSHIPS=[
-  {group:'MONTHLY CONTRACT',groupNote:'Rolling monthly billing on a 12-month minimum term. The lowest monthly price we do.',
-   nm:'GOAL',amt:'98',per:'/MO',meta:'12-month commitment. Freeze up to 3 months. Card only.',url:LINKS.monthly,cta:'Join monthly',tc:'goal',flag:'MOST POPULAR'},
-  {group:'PREPAID',groupNote:'Pay once. No notice period, nothing to cancel. All payment types accepted.',
-   nm:'1 MONTH',amt:'135',per:'ONCE',meta:'Best for trying us out before committing.',url:LINKS.t1,cta:'Buy 1 month',tc:'term'},
-  {nm:'3 MONTHS',amt:'328',per:'ONCE',meta:'Works out at $109 a month. Usually $405.',url:LINKS.t3,cta:'Buy 3 months',tc:'term'},
-  {nm:'6 MONTHS',amt:'618',per:'ONCE',meta:'Works out at $103 a month. Usually $810.',url:LINKS.t6,cta:'Buy 6 months',tc:'term'},
-  {nm:'12 MONTHS',amt:'1068',per:'ONCE',meta:'Works out at $89 a month. Usually $1,620. Best value.',url:LINKS.t12,cta:'Buy 12 months',tc:'term',flag:'BEST VALUE'}
-];
-var PASSES=[
-  {nm:'1 DAY',amt:'28',per:'/DAY',meta:'24 hours of everything, including one HydroMassage Lounger session.',url:LINKS.day1,cta:'Buy a day pass',tc:'visitor'},
-  {nm:'7 DAYS',amt:'100',per:'/WEEK',meta:'A full week, including seven HydroMassage Lounger sessions.',url:LINKS.day7,cta:'Buy a week pass',tc:'visitor'}
-];
-var PT=[
-  {nm:'1 SESSION',amt:'130',per:'/HR',meta:'$130 total. Try a session and see if the coaching suits you.',url:LINKS.pt1,cta:'Buy 1 session'},
-  {nm:'3 SESSIONS',amt:'65',per:'/HR',meta:'$195 total. Half the usual rate. One purchase per member.',url:LINKS.pt3,cta:'Buy 3 sessions',flag:'NEW PROMOTION'},
-  {nm:'5 SESSIONS',amt:'110',per:'/HR',meta:'$550 total. Enough to build a programme and learn the lifts properly.',url:LINKS.pt5,cta:'Buy 5 sessions'},
-  {nm:'10 SESSIONS',amt:'100',per:'/HR',meta:'$1,000 total. Weekly coaching for a couple of months.',url:LINKS.pt10,cta:'Buy 10 sessions'},
-  {nm:'20 SESSIONS',amt:'95',per:'/HR',meta:'$1,900 total. Steady coaching across a full training block.',url:LINKS.pt20,cta:'Buy 20 sessions'},
-  {nm:'30 SESSIONS',amt:'90',per:'/HR',meta:'$2,700 total. Our lowest hourly rate.',url:LINKS.pt30,cta:'Buy 30 sessions'}
-];
 var GUIDES=[
   {f:'mobile-app-tutorial.html',t:'GOFIT APP TUTORIAL',
    d:'Download it, log in, and open the door with your phone.',n:6,m:'2 min'},
@@ -1082,99 +994,8 @@ var GUIDES=[
    d:'Renew using a voucher bought on Lazada.',n:11,m:'3 min'}
 ];
 
-var FLOORS=[
-  {fl:'L2',fn:'FREE WEIGHTS',
-   desc:'Freedom rack, half rack, Smith machine, cable machines, leg press, chest presses, hack squat, hip thrust, a lifting platform and dumbbells to 50kg. Plus an outdoor balcony for rings, ropes and TRX.',
-   photos:[
-     {f:'IMG_6095',cap:'The main floor',alt:'Wide view of the free weights floor with dumbbell racks, benches and plate-loaded machines against a yellow wall'},
-     {f:'IMG_6112',cap:'Smith machine and racks',alt:'Smith machine and adjustable bench beside squat racks, reflected in the mirrored wall'},
-     {f:'IMG_6097',cap:'Dumbbells to 50kg',alt:'Rows of Ziva rubber dumbbells beside a lifting platform and colour-coded bumper plates'},
-     {f:'IMG_6101',cap:'Outdoor balcony',alt:'Outdoor training balcony with a living green wall, gymnastic rings, TRX straps, battle ropes and kettlebells'},
-     {f:'IMG_6105',cap:'Ziva bumpers',alt:'Close-up of stacked colour-coded Ziva bumper plates'}
-   ]},
-  {fl:'L3',fn:'MACHINES',
-   desc:'32 Nautilus machines including the Nautilus Leverage line. Lock’n’Load selectorised precision adjustment. There is not one muscle group you can’t train here.',
-   photos:[
-     {f:'IMG_6119',cap:'The machine floor',alt:'Wide view of the machines floor with rows of Nautilus Impact selectorised machines and yellow Super Circuit stations'},
-     {f:'IMG_6124',cap:'Nautilus Leverage',alt:'Row of plate-loaded Nautilus Leverage machines including chest press and incline press'},
-     {f:'PXL_20231021_080102403',cap:'Incline Leverage chest press',alt:'Nautilus Leverage plate-loaded chest press seen head on, with a numbered Super Circuit floor marker in front'},
-     {f:'20220515_145246',cap:'Nautilus cams',alt:'Close view of the Nautilus cams and converging press arms that vary resistance through the movement'},
-     {f:'PXL_20231029_110527158__1_',cap:'Lock’n’Load selectors',alt:'Close-up of a LockNLoad weight stack selector marked in five kilogram steps with a plus two point five kilogram adjuster'}
-   ]},
-  {fl:'L4',fn:'CARDIO',
-   desc:'Treadmills, upright and recumbent bikes, ellipticals, StairMasters and steppers, HIIT rowers and air bikes. The Evolt 360 body composition scanner sits on this floor, so you can track your progress with precision.',
-   photos:[
-     {f:'IMG_6130',cap:'The cardio floor',alt:'Wide view of the cardio floor with rows of Star Trac bikes and treadmills, ellipticals, StairMaster steppers and rowers on a wooden floor'},
-     {f:'IMG_6132',cap:'Ellipticals and treadmills',alt:'Ellipticals, treadmills and recumbent bikes arranged along a teal wall with daylight from the windows'},
-     {f:'IMG_6138',cap:'StairMaster',alt:'StairMaster stepper in the foreground with the Gauntlet climber and a row of Star Trac machines behind'},
-     {f:'IMG_6141',cap:'Star Trac bikes',alt:'Star Trac upright bikes and ellipticals spread across the cardio floor'},
-     {f:'IMG_6136',cap:'Every machine, its own console',alt:'Close-up of a Star Trac treadmill console showing incline, speed and programme buttons'}
-   ]},
-  {fl:'L5',fn:'GX STUDIO & CHILL ZONE',
-   desc:'A large studio for group classes, fitness games and coached sessions, and a chill zone for those pre or post workout quiet moments. Also co-located is the AO Wellness accredited physiotherapy clinic.',
-   groups:[
-     {label:'GX Studio',photos:[
-       {f:'20220608_192117',cap:'Class in session',alt:'Members training in the GX studio with Bosu domes, medicine balls, sandbags and kettlebells under yellow and black walls'},
-       {f:'IMG_20230508_191854_377',cap:'Coached and spaced out',alt:'A coach leading a small evening class, members spread across mats with barbells and slam balls'},
-       {f:'IMG_6146',cap:'The empty floor',alt:'The empty GX studio showing the wooden floor, plyo soft boxes, crash mat and projector wall'}
-     ]},
-     {label:'Chill zone',photos:[
-       {f:'IMG_6142',cap:'Recliners and bean bags',alt:'Quiet recovery room with bean bags, floor cushions and leather recliners beside a wall of windows'},
-       {f:'IMG_6145',cap:'Room to spread out',alt:'The wider chill zone with leather recliners, floor cushions and bean bags across colour-blocked black, teal and red walls'}
-     ]}
-   ],
-   photos:[]},
-  {fl:'L6',fn:'ROOFTOP & RECOVERY',
-   desc:'Open-air training on the roof anytime. The Recovery Zone holds the only HydroMassage deep tissue loungers in Singapore: scan your code, lie down and get your deep tissue recovery. No undressing, no appointment.',
-   groups:[
-     {label:'Rooftop',photos:[
-       {f:'GFG_0369',cap:'After dark',alt:'Rooftop training deck at night with the GoFit logo across black turf, glowing colour cubes and the Geylang skyline behind'},
-       {f:'photo_2022-06-06_18-05-01',cap:'Open air training',alt:'Rooftop turf marked with the GoFit logo, laid out with Bosu domes, sandbags, dumbbells, resistance bands and a plyo box'}
-     ]},
-     {label:'Recovery zone',photos:[
-       {f:'IMG_6156',cap:'The Recovery Zone',alt:'Recovery Zone with a HydroMassage lounger against a red wall and a rack of GoFit apparel beside the glass doors'},
-       {f:'HM5',cap:'Ten minutes, fully clothed',alt:'A staff member showing a member how to start a session on the HydroMassage lounger'},
-       {f:'JO5_4863',cap:'Scan and start',alt:'Close-up of the HydroMassage touchscreen showing the start button and a ten minute timer beside the access reader'}
-     ]}
-   ],
-   photos:[]}
-];
-var PHOTOS={};
-PHOTOS['GFG_0369']='img/gfg-0369.jpg';
-PHOTOS['photo_2022-06-06_18-05-01']='img/photo-2022-06-06-18-05-01.jpg';
-PHOTOS['IMG_6156']='img/img-6156.jpg';
-PHOTOS['HM5']='img/hm5.jpg';
-PHOTOS['JO5_4863']='img/jo5-4863.jpg';
-PHOTOS['20220608_192117']='img/20220608-192117.jpg';
-PHOTOS['IMG_20230508_191854_377']='img/img-20230508-191854-377.jpg';
-PHOTOS['IMG_6146']='img/img-6146.jpg';
-PHOTOS['IMG_6145']='img/img-6145.jpg';
-PHOTOS['IMG_6142']='img/img-6142.jpg';
-PHOTOS['IMG_6130']='img/img-6130.jpg';
-PHOTOS['IMG_6132']='img/img-6132.jpg';
-PHOTOS['IMG_6138']='img/img-6138.jpg';
-PHOTOS['IMG_6141']='img/img-6141.jpg';
-PHOTOS['IMG_6136']='img/img-6136.jpg';
-PHOTOS['IMG_6119']='img/img-6119.jpg';
-PHOTOS['IMG_6124']='img/img-6124.jpg';
-PHOTOS['PXL_20231021_080102403']='img/pxl-20231021-080102403.jpg';
-PHOTOS['20220515_145246']='img/20220515-145246.jpg';
-PHOTOS['PXL_20231029_110527158__1_']='img/pxl-20231029-110527158--1-.jpg';
-PHOTOS['IMG_6095']='img/img-6095.jpg';
-PHOTOS['IMG_6112']='img/img-6112.jpg';
-PHOTOS['IMG_6097']='img/img-6097.jpg';
-PHOTOS['IMG_6101']='img/img-6101.jpg';
-PHOTOS['IMG_6105']='img/img-6105.jpg';
 
 
-var FACTS=[
-  {k:'24/7',v:'Open every hour of every day, all year. Your app code gets you in.'},
-  {k:'$0',v:'No joining fee. No admin fee. No keycard fee.'},
-  {k:'5',v:'Five floors of cardio, free weights, machines and recovery.'},
-  {k:'32',v:'Nautilus machines on L3 alone, selectorised and plate-loaded.'},
-  {k:'FREE',v:'Group classes, member parking and the mobile app.'},
-  {k:'4.9★',v:'Rated by 120 Google reviewers. Top 3 gym in Geylang, four years running.'}
-];
 var CLASSES=[
   {t:'SWEATY SUNSET',tag:'Rooftop HIIT · 45 min · all levels',
    d:'Our signature outdoor class. Bodyweight circuits, high-intensity bursts and functional work as the sun goes down over Geylang.'},
@@ -1186,11 +1007,6 @@ var CLASSES=[
    d:'Guided mobility for recovery days, post-lifting or desk-stiff shoulders. Included with every membership.'},
   {t:'HANDSTAND',tag:'Intermediate · new',
    d:'Drills and progressions for balance, shoulder control and freestanding inversions.'}
-];
-var XPERTS=[
-  {nm:'JASON',d:'Bootcamp, weight loss and body transformation',f:'pt-jason.html',img:'img/pt-jason.jpg'},
-  {nm:'AMIT',d:'Weight loss, toning and body transformation',f:'pt-amit.html',img:'img/pt-amit.jpg'},
-  {nm:'XIN',d:'Mobility, hand balancing and general fitness',f:'pt-xin.html',img:'img/pt-xin.jpg'}
 ];
 var PLUS=[
   {k:'ALL CLUBS',t:'Train at any GoFit club',
@@ -1207,32 +1023,6 @@ var TCS={
     ['Eligibility','Plus can be added to any active GoFit X membership, monthly contract or prepaid. It runs as a separate contract alongside your membership and does not change it.'],
     ['Payment','$15 a month, billed by credit or debit card on the 1st of every month. Cash and PayNow are not accepted. Your first charge is pro rata for the days left in the month you start.'],
     ['Cancellation','Plus runs month to month with a one calendar month minimum. Cancel any time with one full calendar month\u2019s notice, given before the end of the month prior.']
-  ]},
-  goal:{title:'GOAL MEMBERSHIP T&CS',items:[
-    ['Cancellation','Ending your membership before the 12-month minimum contract period is complete requires a departure fee of 50% of the remaining term, plus one full calendar month\u2019s notice. Once the term is complete the membership rolls month to month, and cancelling needs one full calendar month\u2019s written notice with all outstanding fees settled first.'],
-    ['Freezing','A freeze runs a full calendar month — no part months. Requests must be in by the 20th of the month before, and cannot be backdated. Frozen time does not count toward your minimum term and cannot cover your notice period. $14 per month of freeze.'],
-    ['Guest pass','Guests must complete a guest registration before entry. Members are responsible for their guest following the gym rules. Each guest pass is a single visit only, however it was obtained.'],
-    ['Abuse of membership','Management may terminate a membership immediately and without notice for any breach of the rules. Sharing credentials or helping anyone enter the gym is strictly forbidden. No tailgating, no sharing phones at the entrance.'],
-    ['Dress code','Proper gym attire at all times. Tops must cover the chest area, no torn clothing. Closed-toe, non-marking, rubber-soled shoes throughout, except the L5 chill zone and the deadlift platform.'],
-    ['Monthly dues','Fees are billed on the 1st of every calendar month. A $4 + GST fee applies to every failed payment attempt, and entry is denied until all dues are settled.']
-  ]},
-  term:{title:'PREPAID MEMBERSHIP T&CS',items:[
-    ['Membership term','Choose 1, 3, 6 or 12 months. The term runs continuously from the date of activation.'],
-    ['Voucher activation','Lazada purchases only. Vouchers must be redeemed within 7 days of purchase, or on activation, whichever comes first. If not redeemed in that window the system redeems it automatically and the membership counts as used.'],
-    ['Refunds','Once a membership is activated it is non-refundable.'],
-    ['Freezing','Prepaid memberships cannot be frozen. The term runs continuously from activation and the expiry date is fixed — it will not be extended for illness, travel, or facilities being unavailable.'],
-    ['Guest pass','Guests must complete a guest registration before entry. Members are responsible for their guest following the gym rules. Each guest pass is a single visit only.'],
-    ['Abuse of membership','Management may terminate a membership immediately and without notice for any breach of the rules. Sharing accounts or helping anyone enter the gym is strictly forbidden.'],
-    ['Dress code','Proper gym attire at all times. Tops must cover the chest area, no torn clothing. Closed-toe, non-marking, rubber-soled shoes throughout, except the L5 chill zone and the deadlift platform.']
-  ]},
-  visitor:{title:'VISITOR PASS T&CS',items:[
-    ['Day pass','One visit, no time limit on the visit. Must be used within 7 calendar days of purchase, after which it expires whether or not it has been used.'],
-    ['Week pass','Seven entries within 7 calendar days of purchase, used on the same day or spread out. Unused entries lapse with no refund or extension.'],
-    ['Access','Both passes give full access to the gym. Visitor pass holders cannot bring guests. Passes are personal and cannot be transferred.'],
-    ['Buying and registering','Buy online by Visa or Mastercard, or at the front desk during staffed hours. You must register online at the time of purchase and provide government photo ID.'],
-    ['Refunds and deferral','Strictly non-refundable once purchased, used or not. A pass may be deferred once only, before it has been used, at management\u2019s discretion, up to one calendar month from purchase.'],
-    ['Minimum age','14 years old as per local identification record. Under 18s need a parent or guardian\u2019s consent online at the time of purchase.'],
-    ['Health and safety','Bring a personal sweat towel — access can be denied without one. Wipe down equipment after use. No smoking or vaping anywhere on site, including the carpark. Do not train under the influence.']
   ]}
 };
 
@@ -1294,93 +1084,7 @@ function card(item){
   '</div>';
 }
 
-document.getElementById('listMemberships').innerHTML=MEMBERSHIPS.map(function(m){
-  var head=m.group?'<div class="grouphead"><span class="gl">'+m.group+'</span>'+
-    (m.groupNote?'<span class="gn">'+m.groupNote+'</span>':'')+'</div>':'';
-  return head+card(m);}).join('')+
-  '<a class="btn sec" style="margin:6px 0 4px" data-wa="Hi GoFit X, I\'d like some help choosing a membership.">'+
-  '<span class="ico">'+icon('wa')+'</span><span class="lbl">Not sure which one? Ask us</span><span class="chev">→</span></a>';
 
-document.getElementById('listPasses').innerHTML=PASSES.map(card).join('');
-
-document.getElementById('listPT').innerHTML=
-  '<div class="grouphead"><span class="gl">MEET THE X-PERTS</span>'+
-  '<span class="gn">Tap a coach to read their story and book a session.</span></div>'+
-  XPERTS.map(function(x){
-    var ph=x.img?'<img src="'+x.img+'" alt="'+x.nm+', personal trainer at GoFit X" loading="lazy">':'<span class="xi">'+x.nm.charAt(0)+'</span>';
-    return '<a class="xpert" href="'+x.f+'"><span class="xp">'+ph+'</span>'+
-      '<span class="xt"><span class="xn">'+x.nm+'</span><span class="xd">'+x.d+'</span></span><span class="go">→</span></a>';
-  }).join('')+
-  '<div class="grouphead"><span class="gl">PACKAGES</span>'+
-  '<span class="gn">Every package includes a complimentary Evolt 360 body composition scan.</span></div>'+
-  '<div class="note"><span class="nh">Members only</span>'+
-  '<span class="nb">You need a membership or visitor pass to train with an X-Pert. Pick a plan first, then book your sessions.</span></div>'+
-  PT.map(card).join('')+
-  '<a class="btn pri" data-wa="Hi GoFit X, I\'d like to talk to a personal trainer.">'+
-  '<span class="ico">'+icon('wa')+'</span><span class="lbl">Talk to a trainer first</span><span class="chev">→</span></a>';
-function floorGroups(fo){
-  if(fo.groups&&fo.groups.length)return fo.groups;
-  if(fo.photos&&fo.photos.length)return [{label:null,photos:fo.photos}];
-  return [];
-}
-document.getElementById('floorList').innerHTML=FLOORS.map(function(fo,fi){
-  var gs=floorGroups(fo);
-  if(!gs.length){
-    return '<div class="floor empty"><span class="fl">'+fo.fl+'</span>'+
-      '<span class="fn">'+fo.fn+'</span><span class="fd">'+fo.desc+'</span></div>';
-  }
-  var body=gs.map(function(g,gi){
-    var shots=g.photos.map(function(p,pi){
-      return '<button class="shot" data-lb="'+fi+'" data-g="'+gi+'" data-i="'+pi+'">'+
-        '<img src="'+PHOTOS[p.f]+'" alt="'+p.alt+'" loading="lazy" width="900" height="675">'+
-        '<span class="cap">'+p.cap+'</span></button>';
-    }).join('');
-    var head=g.label?'<div class="grouplabel"><span class="gt">'+g.label+'</span>'+
-      '<span class="fc" data-c="'+fi+'-'+gi+'">1 / '+g.photos.length+'</span></div>':'';
-    return head+'<div class="strip" data-strip="'+fi+'-'+gi+'">'+shots+'</div>';
-  }).join('');
-  var counter=gs.length===1?'<span class="fc" data-c="'+fi+'-0">1 / '+gs[0].photos.length+'</span>':'';
-  return '<div class="floor"><div class="floorhead"><span class="fl">'+fo.fl+'</span>'+
-    '<span class="fn">'+fo.fn+'</span>'+counter+'</div>'+
-    body+'<div class="floordesc">'+fo.desc+'</div></div>';
-}).join('');
-
-/* live 1 / n counter as each strip is swiped */
-Array.prototype.forEach.call(document.querySelectorAll('.strip'),function(st){
-  var key=st.dataset.strip,parts=key.split('-');
-  var lbl=document.querySelector('[data-c="'+key+'"]'),tm;
-  var total=floorGroups(FLOORS[parts[0]])[parts[1]].photos.length;
-  if(!lbl)return;
-  st.addEventListener('scroll',function(){
-    clearTimeout(tm);tm=setTimeout(function(){
-      var first=st.firstElementChild;if(!first)return;
-      var step=first.getBoundingClientRect().width+8;
-      lbl.textContent=Math.min(total,Math.round(st.scrollLeft/step)+1)+' / '+total;
-    },60);
-  },{passive:true});
-});
-
-/* lightbox */
-var lb=document.getElementById('lb');
-function openLightbox(fi,gi,pi){
-  var fo=FLOORS[fi],g=floorGroups(fo)[gi];
-  document.getElementById('lbTitle').textContent=fo.fl+' · '+(g.label||fo.fn);
-  document.getElementById('lbStrip').innerHTML=g.photos.map(function(p){
-    return '<img src="'+PHOTOS[p.f]+'" alt="'+p.alt+'" loading="lazy">';}).join('');
-  document.getElementById('lbCap').textContent=g.photos[pi].cap;
-  lb.classList.add('on');
-  document.body.style.overflow='hidden';
-  var strip=document.getElementById('lbStrip');
-  strip.scrollLeft=strip.clientWidth*pi;
-  strip.onscroll=function(){
-    var n=Math.round(strip.scrollLeft/strip.clientWidth);
-    if(g.photos[n])document.getElementById('lbCap').textContent=g.photos[n].cap;
-  };
-}
-function closeLightbox(){lb.classList.remove('on');document.body.style.overflow='';}
-
-document.getElementById('factList').innerHTML=FACTS.map(function(f){
-  return '<div class="fact"><div class="k">'+f.k+'</div><div class="v">'+f.v+'</div></div>';}).join('');
 
 document.getElementById('classList').innerHTML=CLASSES.map(function(c){
   return '<div class="block"><span class="tagline">'+c.tag+'</span><h3>'+c.t+'</h3><p>'+c.d+'</p></div>';}).join('')+
@@ -1438,8 +1142,10 @@ document.getElementById('guideList').innerHTML=GUIDES.map(function(g,i){
     '<span class="go">→</span></a>';}).join('');
 
 document.getElementById('menuItems').innerHTML=MENU.map(function(m){
-  return '<button class="mi" data-go="'+m.id+'"><span class="n">'+m.n+'</span>'+
-    '<span class="t">'+m.t+'<span class="d">'+m.d+'</span></span><span class="go">→</span></button>';}).join('');
+  var inner='<span class="n">'+m.n+'</span>'+
+    '<span class="t">'+m.t+'<span class="d">'+m.d+'</span></span><span class="go">→</span>';
+  return m.href?'<a class="mi" href="'+m.href+'">'+inner+'</a>'
+               :'<button class="mi" data-go="'+m.id+'">'+inner+'</button>';}).join('');
 
 document.getElementById('tick').innerHTML=(function(){
   var t=['NO JOINING FEE','NO CONTRACT OPTIONS','THREE BEST GYM','NO KEYFOB FEE','OPEN 24/7',
@@ -1504,8 +1210,9 @@ Array.prototype.forEach.call(document.querySelectorAll('[data-wa]'),function(el)
    Inert on mobile: #rail is display:none below 900px.
    ================================================================ */
 document.getElementById('railMenu').innerHTML=MENU.map(function(m){
-  return '<button class="rmi" data-go="'+m.id+'" data-rail="'+m.id+'">'+
-    '<span class="n">'+m.n+'</span><span class="t">'+m.t+'</span></button>';}).join('');
+  var inner='<span class="n">'+m.n+'</span><span class="t">'+m.t+'</span>';
+  return m.href?'<a class="rmi" href="'+m.href+'" data-rail="'+m.id+'">'+inner+'</a>'
+               :'<button class="rmi" data-go="'+m.id+'" data-rail="'+m.id+'">'+inner+'</button>';}).join('');
 document.getElementById('lockRail').innerHTML='<img src="'+LOGO+'" alt="GoFit X Gym Geylang">';
 document.getElementById('railWa').href=wa("Hi GoFit X, I have a question.");
 document.getElementById('railWa').target='_blank';
@@ -1514,22 +1221,16 @@ function syncRail(id){
     b.classList.toggle('on',b.dataset.rail===id);});
 }
 
-/* arrow keys and backdrop click in the lightbox — desktop affordances */
-document.addEventListener('keydown',function(e){
-  if(!lb.classList.contains('on'))return;
-  if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
-  e.preventDefault();
-  var st=document.getElementById('lbStrip');
-  st.scrollLeft+=(e.key==='ArrowRight'?1:-1)*st.clientWidth;
-});
-
 /* ================================================================
    5. NAVIGATION — hash routed so the phone back button works
    ================================================================ */
-var VALID={home:1,visit:1,memberships:1,passes:1,included:1,classes:1,pt:1,plus:1,faq:1,connect:1,guides:1};
+var VALID={home:1,visit:1,classes:1,plus:1,faq:1,connect:1,guides:1};
+/* sections that moved to their own pages — old #links and bookmarks forward there */
+var MOVED={memberships:'/our-membership-plans',passes:'/visitor-passes',included:'/our-equipments',pt:'/personal-training'};
 var modal=document.getElementById('modal');
 
 function show(id,push){
+  if(MOVED[id]){location.replace(MOVED[id]);return;}
   if(!VALID[id])id='home';
   Array.prototype.forEach.call(document.querySelectorAll('.screen'),function(s){s.classList.remove('on');});
   document.getElementById(id).classList.add('on');
@@ -1549,9 +1250,6 @@ function openModal(key){
 }
 
 document.addEventListener('click',function(e){
-  var sh=e.target.closest('[data-lb]');
-  if(sh){openLightbox(sh.dataset.lb,+(sh.dataset.g||0),+sh.dataset.i);return;}
-  if(e.target.closest('#lbClose')||e.target===lb){closeLightbox();return;}
   var mi=e.target.closest('[data-go]');
   if(mi){show(mi.dataset.go);return;}
   if(e.target.closest('.back')){show('home');return;}
@@ -1561,7 +1259,7 @@ document.addEventListener('click',function(e){
   var qa=e.target.closest('.qa button');
   if(qa){qa.parentElement.classList.toggle('open');return;}
 });
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeLightbox();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();}});
 window.addEventListener('popstate',function(e){
   closeModal();
   show((e.state&&e.state.id)||location.hash.slice(1)||'home',false);

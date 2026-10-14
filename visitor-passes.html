@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gym Day Pass Singapore — $28 a Day, $100 a Week | GoFit X Geylang</title>
+<meta name="description" content="Visiting Singapore? Train at GoFit X Gym Geylang with a 1-day pass ($28) or 7-day pass ($100). 24/7 access, five floors, free classes and HydroMassage included.">
+<link rel="canonical" href="https://www.gofitx.sg/visitor-passes">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoFit X Gym Geylang">
+<meta property="og:locale" content="en_SG">
+<meta property="og:url" content="https://www.gofitx.sg/visitor-passes">
+<meta property="og:title" content="Gym Day Pass Singapore — $28 a Day, $100 a Week | GoFit X Geylang">
+<meta property="og:description" content="Visiting Singapore? Train at GoFit X Gym Geylang with a 1-day pass ($28) or 7-day pass ($100). 24/7 access, five floors, free classes and HydroMassage included.">
+<meta property="og:image" content="https://www.gofitx.sg/img/img-6130.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gym Day Pass Singapore — $28 a Day, $100 a Week | GoFit X Geylang">
+<meta name="twitter:description" content="Visiting Singapore? Train at GoFit X Gym Geylang with a 1-day pass ($28) or 7-day pass ($100). 24/7 access, five floors, free classes and HydroMassage included.">
+<meta name="twitter:image" content="https://www.gofitx.sg/img/img-6130.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900&family=Hanken+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   GoFit X Geylang — mobile-first site  ·  prototype v1
+   Design template: Fittar mirror kiosk v9
+   Colour + type per GOFIT Brand Guideline v.1
+   Primary action throughout: WhatsApp / visit us
+   ============================================================ */
+:root{
+  --yellow:#FCD900;
+  --black:#000000;
+  --red:#FF536C;
+  --teal:#47D5CD;
+  --blue:#0080BA;
+  --surface:#0e0e0e;
+  --line:#242424;
+  --display:'Archivo','Arial Narrow',Arial,sans-serif;   /* stand-in for Cindie Mono */
+  --body:'Hanken Grotesk',Arial,Helvetica,sans-serif;    /* stand-in for GT Walsheim */
+  --pad:20px;
+  --bar:76px;   /* sticky action bar height */
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{background:#000;color:#fff;font-family:var(--body);
+  min-height:100dvh;overflow-x:hidden}
+
+/* desktop just centres the phone column — mobile is the real design */
+#app{max-width:560px;margin:0 auto;position:relative;min-height:100dvh;
+  border-left:1px solid var(--line);border-right:1px solid var(--line)}
+@media (max-width:600px){#app{border:0}}
+
+/* ---------- type ---------- */
+.agile{font-family:var(--display);font-weight:700;text-transform:uppercase;overflow:hidden;
+  line-height:.88;white-space:nowrap;display:block;color:var(--yellow)}
+.agile span{font-variation-settings:'wdth' var(--w,100)}
+.agile .pre{visibility:hidden}
+.eyebrow{font:800 11px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.kick{font:500 16px/1.5 var(--body);color:rgba(255,255,255,.74);margin-top:12px}
+
+/* ---------- screens ---------- */
+.screen{display:none;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom) + 24px)}
+.screen.on{display:block}
+
+/* ---------- home ---------- */
+.topbar{display:flex;align-items:center;gap:12px;padding:18px var(--pad) 0}
+.topbar .lockup{width:104px;flex:none}
+.topbar .lockup img{width:100%;height:auto;display:block}
+.status{margin-left:auto;display:flex;align-items:center;gap:7px;
+  font:800 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;
+  border:1.5px solid var(--yellow);color:var(--yellow);border-radius:99px;padding:8px 12px}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);
+  animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.hero{padding:26px var(--pad) 0}
+.hero .agile{font-size:13vw}
+@media (min-width:560px){.hero .agile{font-size:72px}}
+.hero .kick{max-width:34ch}
+
+.proof{display:flex;gap:0;margin:22px var(--pad) 0;border:1px solid var(--line)}
+.proof a,.proof div{flex:1;padding:13px 10px;text-align:center;text-decoration:none;
+  border-right:1px solid var(--line);color:#fff}
+.proof a:last-child,.proof div:last-child{border-right:0}
+.proof .big{display:block;font-family:var(--display);font-weight:700;font-size:22px;
+  font-variation-settings:'wdth' 100;color:var(--yellow);line-height:1}
+.proof .lbl{display:block;font:600 11px/1.35 var(--body);letter-spacing:.06em;
+  text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:7px}
+
+/* ---------- primary actions ---------- */
+.acts{padding:22px var(--pad) 4px;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;gap:12px;width:100%;border:0;cursor:pointer;
+  font-family:var(--body);text-decoration:none;padding:17px 18px;text-align:left}
+.btn .lbl{font:800 15px/1.15 var(--body);letter-spacing:.02em}
+.btn .sub{display:block;font:500 12px/1.3 var(--body);opacity:.7;margin-top:4px;letter-spacing:0}
+.btn .ico{width:22px;height:22px;flex:none}
+.btn .chev{margin-left:auto;font-family:var(--display);font-weight:700;font-size:20px}
+.btn.pri{background:var(--yellow);color:#000}
+.btn.sec{background:transparent;color:#fff;border:2px solid #2e2e2e}
+.btn.sec .chev{color:var(--yellow)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* ---------- menu ---------- */
+.menu{margin-top:26px;border-top:1px solid var(--line)}
+.mi{display:flex;align-items:center;gap:16px;width:100%;background:#000;color:#fff;
+  border:0;border-bottom:1px solid var(--line);padding:20px var(--pad);cursor:pointer;
+  text-align:left;font-family:var(--body)}
+.mi .n{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 62;
+  font-size:15px;color:var(--yellow);width:22px;flex:none}
+.mi .t{font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:23px;line-height:.95;font-variation-settings:'wdth' 100}
+.mi .d{display:block;font-family:var(--body);font-weight:500;font-size:14px;
+  line-height:1.45;text-transform:none;color:rgba(255,255,255,.6);margin-top:6px;
+  font-variation-settings:'wdth' 100}
+.mi .go{margin-left:auto;font-family:var(--display);font-weight:700;font-size:22px;color:var(--yellow)}
+.mi:active{background:#0d0d0d}
+.mi:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--yellow);color:#000;padding:13px 0;overflow:hidden}
+#home .ticker{padding-top:calc(13px + env(safe-area-inset-top))}
+.ticker div{display:flex;gap:26px;white-space:nowrap;font:800 12px/1 var(--body);
+  letter-spacing:.14em;width:max-content;animation:slide 32s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.foot{padding:26px var(--pad);font:500 13.5px/1.7 var(--body);color:rgba(255,255,255,.4)}
+.foot a{color:rgba(255,255,255,.55)}
+
+/* ---------- section headers ---------- */
+.sechead{position:sticky;top:0;z-index:20;background:#000;border-bottom:1px solid var(--line);
+  padding:calc(env(safe-area-inset-top) + 8px) var(--pad) 12px}
+.back{display:flex;align-items:center;gap:9px;background:transparent;border:0;cursor:pointer;
+  font:800 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);
+  padding:10px 4px 10px 0;font-family:var(--body)}
+.back .arrow{font-family:var(--display);font-weight:700;font-size:17px;line-height:1}
+.sectitle{padding:20px var(--pad) 22px}
+.sectitle .agile{font-size:11.5vw}
+@media (min-width:560px){.sectitle .agile{font-size:64px}}
+
+.list{padding:0 var(--pad)}
+
+/* ---------- price cards ---------- */
+.card{background:var(--surface);border-left:6px solid var(--yellow);padding:18px;margin-bottom:12px}
+.card .row{display:flex;align-items:center;gap:16px}
+.roundel{width:82px;height:82px;border-radius:50%;background:#000;color:var(--yellow);flex:none;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:2px solid #1d1d1d}
+.roundel .cur{font-family:var(--display);font-weight:700;font-size:12px;line-height:1}
+.roundel .amt{font-family:var(--display);font-weight:700;font-size:34px;line-height:.85;
+  font-variation-settings:'wdth' 108}
+.roundel .per{font-family:var(--display);font-weight:700;font-size:10px;line-height:1;letter-spacing:.05em}
+.card .info{flex:1;min-width:0}
+.card .nm{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:26px;
+  line-height:.95;font-variation-settings:'wdth' 106}
+.card .meta{font:500 15.5px/1.5 var(--body);color:rgba(255,255,255,.74);margin-top:9px}
+.card .cta{margin-top:15px}
+.card .cta .btn{padding:14px 16px;justify-content:center}
+.card .cta .btn .lbl{font-size:14px}
+.flag{display:inline-block;background:var(--yellow);color:#000;font:800 11px/1 var(--body);
+  letter-spacing:.14em;padding:7px 9px;margin-bottom:9px}
+.tc{background:none;border:0;padding:8px 0 0;cursor:pointer;font:700 12px/1.2 var(--body);
+  color:var(--yellow);text-decoration:underline;text-underline-offset:4px;font-family:var(--body)}
+
+.grouphead{border-top:3px solid var(--yellow);padding:18px 0 12px;margin-top:8px}
+.grouphead:first-child{margin-top:0}
+.grouphead .gl{display:block;font:800 13px/1 var(--body);letter-spacing:.24em;
+  text-transform:uppercase;color:var(--yellow)}
+.grouphead .gn{display:block;font:500 13px/1.45 var(--body);color:rgba(255,255,255,.6);margin-top:9px}
+
+.note{background:var(--yellow);color:#000;padding:18px;margin-bottom:14px}
+.note .nh{display:block;font:800 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.note .nb{display:block;font:500 15.5px/1.5 var(--body);margin-top:10px}
+
+/* ---------- facts / info rows ---------- */
+.fact{display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.fact:first-child{border-top:0}
+.fact .k{font-family:var(--display);font-weight:700;font-size:30px;line-height:.9;color:var(--yellow);
+  font-variation-settings:'wdth' 108;min-width:88px}
+.fact .v{font:500 15.5px/1.5 var(--body)}
+
+.block{background:var(--surface);padding:18px;margin-bottom:12px}
+/* ---------- trainer cards ---------- */
+.xpert{display:flex;align-items:center;gap:15px;background:var(--surface);padding:12px;margin-bottom:10px;
+  text-decoration:none;color:#fff;border-left:6px solid var(--teal)}
+.xpert:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.xpert .xp{width:72px;height:72px;flex:0 0 72px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.xpert .xp img{width:100%;height:100%;object-fit:cover;display:block}
+.xpert .xi{font-family:var(--display);font-weight:700;font-size:40px;color:var(--yellow);line-height:1}
+.xpert .xt{flex:1;min-width:0}
+.xpert .xn{display:block;font-family:var(--display);font-weight:700;font-size:24px;line-height:1;text-transform:uppercase}
+.xpert .xd{display:block;font:500 14.5px/1.4 var(--body);color:rgba(255,255,255,.7);margin-top:6px}
+.xpert .go{font:800 20px/1 var(--body);color:var(--yellow);padding-right:4px}
+.block h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:21px;
+  line-height:.98;font-variation-settings:'wdth' 106;color:#fff}
+.block .tagline{font:800 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:9px}
+.block p{font:500 15.5px/1.55 var(--body);color:rgba(255,255,255,.75);margin-top:10px}
+.block .lines{margin-top:12px;font:500 15.5px/1.75 var(--body);color:rgba(255,255,255,.8)}
+.block .lines b{font-weight:800;color:#fff}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid #2c2c2c;color:rgba(255,255,255,.75);padding:9px 11px}
+
+/* ---------- accordion ---------- */
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;align-items:center;gap:14px;background:none;border:0;
+  cursor:pointer;padding:18px 0;text-align:left;color:#fff;font-family:var(--body)}
+.qa .q{font:800 16px/1.35 var(--body);flex:1}
+.qa .pm{font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow);
+  line-height:1;transition:transform .2s ease}
+.qa.open .pm{transform:rotate(45deg)}
+.qa .a{display:none;padding:0 0 18px;font:500 15.5px/1.6 var(--body);color:rgba(255,255,255,.76)}
+.qa.open .a{display:block}
+.qa .a b{color:#fff}
+
+/* ---------- how to guides ---------- */
+.glink{display:flex;align-items:flex-start;gap:14px;background:var(--surface);
+  border-left:6px solid var(--yellow);padding:17px;margin-bottom:11px;text-decoration:none;color:#fff}
+.glink .gn{font-family:var(--display);font-weight:700;font-size:19px;line-height:1;
+  color:var(--yellow);font-variation-settings:'wdth' 100;min-width:26px;padding-top:2px}
+.glink .gt{flex:1;font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:19px;line-height:1.05;font-variation-settings:'wdth' 100}
+.glink .gd{display:block;font-family:var(--body);font-weight:500;font-size:15px;line-height:1.5;
+  text-transform:none;color:rgba(255,255,255,.62);margin-top:8px;font-variation-settings:'wdth' 100}
+.glink .gm{display:block;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--yellow);margin-top:9px;font-variation-settings:'wdth' 100}
+.glink .go{font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow);padding-top:2px}
+.glink:active{background:#141414}
+
+/* ---------- socials ---------- */
+.social{display:flex;align-items:center;gap:16px;background:var(--surface);padding:16px;
+  margin-bottom:12px;text-decoration:none;color:#fff}
+.social.tiktok{border-left:6px solid var(--teal)}
+.social.instagram{border-left:6px solid var(--red)}
+.social.facebook{border-left:6px solid var(--blue)}
+.social.app{border-left:6px solid var(--yellow)}
+.social.play{border-left:6px solid var(--blue)}
+.social .glyph{width:38px;height:38px;flex:none}
+.social .nm{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:20px;
+  font-variation-settings:'wdth' 106;line-height:1}
+.social .handle{font:700 13px/1.2 var(--body);color:var(--yellow);margin-top:6px}
+.social .meta{font:500 14.5px/1.5 var(--body);color:rgba(255,255,255,.6);margin-top:5px}
+.social .go{margin-left:auto;font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow)}
+
+/* ---------- sticky action bar ---------- */
+#actionbar{position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+  display:flex;gap:9px;max-width:560px;margin:0 auto}
+#actionbar .btn{padding:15px 14px;justify-content:center;flex:1}
+#actionbar .btn .lbl{font-size:13.5px}
+#actionbar .btn.sec{flex:0 0 42%}
+
+/* ---------- floor gallery ---------- */
+.floor{padding:20px 0 4px;border-top:1px solid var(--line)}
+.floor:first-child{border-top:0;padding-top:4px}
+.floorhead{display:flex;align-items:baseline;gap:12px;padding:0 var(--pad) 12px}
+.floorhead .fl{font-family:var(--display);font-weight:700;font-size:30px;line-height:1;
+  color:var(--yellow);font-variation-settings:'wdth' 108}
+.floorhead .fn{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:19px;
+  line-height:1;font-variation-settings:'wdth' 104}
+.floorhead .fc{margin-left:auto;font:700 11px/1 var(--body);color:rgba(255,255,255,.42)}
+.strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:0 var(--pad) 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.shot{flex:0 0 78%;scroll-snap-align:start;position:relative;background:#141414;
+  border:0;padding:0;cursor:pointer;aspect-ratio:4/3;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));text-align:left;
+  font:700 11px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.grouplabel{display:flex;align-items:baseline;gap:10px;padding:2px var(--pad) 9px}
+.grouplabel .gt{font:800 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.grouplabel .fc{margin-left:auto;font:700 11px/1 var(--body);color:rgba(255,255,255,.42)}
+.strip+.grouplabel{padding-top:16px}
+.floordesc{font:500 15.5px/1.55 var(--body);color:rgba(255,255,255,.74);padding:13px var(--pad) 0}
+.floor.empty{display:flex;align-items:baseline;gap:12px;padding:18px var(--pad) 18px}
+.floor.empty .fl{font-family:var(--display);font-weight:700;font-size:24px;color:var(--yellow);
+  font-variation-settings:'wdth' 108;line-height:1}
+.floor.empty .fn{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:17px;
+  font-variation-settings:'wdth' 104}
+.floor.empty .fd{font:500 12.5px/1.4 var(--body);color:rgba(255,255,255,.55);flex:1}
+
+/* ---------- lightbox ---------- */
+#lb{position:fixed;inset:0;z-index:95;display:none;background:#000;flex-direction:column}
+#lb.on{display:flex}
+#lb .lbtop{display:flex;align-items:center;gap:12px;
+  padding:calc(env(safe-area-inset-top) + 14px) var(--pad) 12px}
+#lb .lbt{flex:1;font:800 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
+#lb .lbx{background:var(--yellow);color:#000;border:0;cursor:pointer;
+  font:800 12px/1 var(--body);letter-spacing:.1em;padding:13px 15px}
+#lb .lbstrip{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  align-items:center;scrollbar-width:none}
+#lb .lbstrip::-webkit-scrollbar{display:none}
+#lb .lbstrip img{flex:0 0 100%;scroll-snap-align:center;width:100%;
+  max-height:70dvh;object-fit:contain}
+#lb .lbcap{padding:12px var(--pad) calc(20px + env(safe-area-inset-bottom));
+  font:500 12.5px/1.5 var(--body);color:rgba(255,255,255,.6)}
+
+/* ---------- splash / sound wall (shown once) ---------- */
+#splash{position:fixed;inset:0;z-index:200;background:#000;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:opacity .45s ease}
+#splash.out{opacity:0;pointer-events:none}
+#splash .wall{position:absolute;inset:-24% -70%;transform:rotate(-9deg);
+  display:flex;flex-direction:column;justify-content:space-between}
+.wallrow{font-family:var(--display);font-weight:700;font-size:15vw;line-height:.86;
+  color:var(--yellow);white-space:nowrap;will-change:transform}
+@media (min-width:560px){.wallrow{font-size:84px}}
+.wallrow.l{animation:slideL 15s linear infinite}
+.wallrow.r{animation:slideR 19s linear infinite}
+@keyframes slideL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#splash .core{position:relative;z-index:2;width:74vw;height:74vw;max-width:340px;max-height:340px;
+  border-radius:50%;background:#000;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:24px;box-shadow:0 0 0 16px #000,0 0 90px 60px rgba(0,0,0,.96)}
+#splash .lockup{width:56%}
+#splash .lockup img{width:100%;height:auto;display:block}
+#splash .cue{color:var(--yellow);border:2.5px solid var(--yellow);border-radius:99px;
+  padding:13px 24px;font:800 12px/1 var(--body);letter-spacing:.2em;
+  animation:blink 2.4s steps(1) infinite}
+@keyframes blink{0%,70%{opacity:1}71%,100%{opacity:.25}}
+#splash .ticker{position:absolute;top:0;left:0;right:0;z-index:3;
+  padding-top:calc(13px + env(safe-area-inset-top))}
+
+/* ---------- modal ---------- */
+#modal{position:fixed;inset:0;z-index:90;display:none;background:rgba(0,0,0,.86);
+  align-items:flex-end;justify-content:center}
+#modal.on{display:flex}
+#modal .sheet{width:100%;max-width:560px;max-height:88dvh;background:#0e0e0e;
+  border-top:8px solid var(--yellow);display:flex;flex-direction:column;
+  animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(24px)}to{transform:translateY(0)}}
+.mhead{display:flex;align-items:center;gap:14px;padding:20px var(--pad) 12px}
+.mtitle{flex:1;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:24px;
+  line-height:1;color:var(--yellow);font-variation-settings:'wdth' 104}
+.mclose{background:var(--yellow);color:#000;border:0;cursor:pointer;font-family:var(--body);
+  font:800 12px/1 var(--body);letter-spacing:.1em;padding:13px 15px}
+.mhours{background:var(--yellow);color:#000;font:800 12px/1.4 var(--body);padding:12px var(--pad)}
+.mbody{overflow-y:auto;padding:4px var(--pad) 0;-webkit-overflow-scrolling:touch}
+.mitem{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.mitem h4{font:800 15.5px/1.35 var(--body);color:#fff;margin-bottom:7px}
+.mitem p{font:400 15px/1.55 var(--body);color:rgba(255,255,255,.72)}
+.mfoot{padding:14px var(--pad) calc(20px + env(safe-area-inset-bottom));
+  font:500 11.5px/1.5 var(--body);color:rgba(255,255,255,.4)}
+
+
+/* ================================================================
+   DESKTOP / LANDSCAPE  —  everything below only applies at 900px+.
+   The mobile build above is untouched.
+   ================================================================ */
+#rail{display:none}
+
+@media (min-width:900px){
+  :root{--pad:34px}
+
+  #app{max-width:none;margin:0 0 0 268px;border:0}
+  .screen{padding-bottom:64px}
+  #actionbar{display:none}
+
+  /* ---- left rail ---- */
+  #rail{display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;width:268px;
+    z-index:50;background:#000;border-right:1px solid var(--line);padding:26px 0 22px}
+  .raillogo{background:none;border:0;cursor:pointer;padding:0 22px 24px;text-align:left}
+  .raillogo span{display:block;width:118px}
+  .raillogo img{width:100%;height:auto;display:block}
+  .railmenu{flex:1;overflow-y:auto}
+  .rmi{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;cursor:pointer;
+    text-align:left;font-family:var(--body);padding:12px 22px;border-left:3px solid transparent}
+  .rmi .n{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 62;
+    font-size:12px;color:var(--yellow);width:18px;flex:none}
+  .rmi .t{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;
+    line-height:1.05;font-variation-settings:'wdth' 100;color:rgba(255,255,255,.72)}
+  .rmi:hover .t{color:#fff}
+  .rmi.on{background:#0f0f0f;border-left-color:var(--yellow)}
+  .rmi.on .t{color:#fff}
+  .rmi:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+  .railcta{padding:18px 22px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+  .railcta .btn{padding:14px;justify-content:flex-start}
+  .railcta .btn .lbl{font-size:13px}
+  .railfoot{font:500 11.5px/1.6 var(--body);color:rgba(255,255,255,.38);padding-top:16px}
+
+  /* ---- home ---- */
+  .topbar .lockup{display:none}
+  .topbar{padding:24px var(--pad) 0}
+  #home .menu{display:none}          /* the rail is the menu now */
+  #home .ticker{padding-top:13px}
+  .hero{padding:34px var(--pad) 0;max-width:1040px}
+  .hero .agile{font-size:104px}
+  .hero .kick{font-size:18px;max-width:52ch}
+  .proof{max-width:1040px;margin-left:var(--pad);margin-right:var(--pad)}
+  .proof .big{font-size:30px}
+  .acts{flex-direction:row;max-width:1040px;gap:12px}
+  .acts .btn{flex:1}
+  .foot{max-width:1040px}
+
+  /* ---- sections ---- */
+  .sechead{display:none}             /* rail handles navigation */
+  .sectitle{padding:38px var(--pad) 26px;max-width:1040px}
+  .sectitle .agile{font-size:78px}
+  .sectitle .kick{font-size:17px;max-width:60ch}
+  .list{max-width:1040px}
+
+  /* ---- gallery: strips become grids ---- */
+  #floorList{max-width:1040px}
+  .strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
+    overflow:visible;scroll-snap-type:none}
+  .shot{flex:none}
+  .shot:hover .cap{background:linear-gradient(transparent,rgba(0,0,0,.92))}
+  .floorhead .fc,.grouplabel .fc{display:none}   /* no swipe, no counter */
+  .floordesc{max-width:74ch}
+
+  /* ---- price cards side by side ---- */
+  #listMemberships,#listPasses,#listPT,#classList{display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #listMemberships>.grouphead,#listPT>.note,#classList>.note,
+  #listMemberships>.btn,#listPT>.btn,#classList>.btn{grid-column:1/-1}
+  #listMemberships .card,#listPasses .card,#listPT .card,#classList .block{margin-bottom:0}
+  #included .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #included #factList{grid-column:1/-1;margin-bottom:0}
+  #included .block{margin-bottom:0}
+  #visit .list{max-width:760px}
+  #connect .list{max-width:760px}
+
+  /* ---- faq in two columns ---- */
+  #faqList{column-count:2;column-gap:48px;max-width:1040px}
+  #guideList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #guideList .glink{margin-bottom:0}
+  .qa{break-inside:avoid;-webkit-column-break-inside:avoid}
+
+  /* ---- lightbox ---- */
+  #lb .lbstrip img{max-height:74dvh}
+  #lb .lbtop{padding:24px var(--pad) 14px}
+
+  /* ---- splash ---- */
+  #splash .core{width:380px;height:380px;max-width:380px;max-height:380px}
+  .wallrow{font-size:96px}
+}
+
+@media (min-width:1400px){
+  #app{margin-left:300px}
+  #rail{width:300px}
+  .hero .agile{font-size:124px}
+  .strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- standalone section pages ---------- */
+a.mi,a.rmi,a.back,a.raillogo{text-decoration:none}
+a.back{color:inherit}
+.screen.on{display:block}
+.sectitle .eyebrow{display:block;margin-bottom:12px}
+.pagemenu{margin-top:30px}
+.pagemenu .mh{display:block;padding:0 var(--pad) 12px;font:800 11px/1 var(--body);letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(255,255,255,.5)}
+@media (min-width:900px){.pagemenu{display:none}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "GoFit X Gym Geylang",
+   "item": "https://www.gofitx.sg/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Visitor passes",
+   "item": "https://www.gofitx.sg/visitor-passes"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<!-- Standalone page for menu passes. Content was moved here from index.html;
+     edit prices, plans and photos in THIS file. -->
+<nav id="rail" aria-label="Main">
+  <a class="raillogo" href="/" aria-label="GoFit X home"><span><img src="img/gofitx-logo.png" alt="GoFit X Gym Geylang"></span></a>
+  <div class="railmenu"><a class="rmi" href="/#visit" data-rail="visit"><span class="n">01</span><span class="t">VISIT US</span></a><a class="rmi" href="/our-membership-plans" data-rail="memberships"><span class="n">02</span><span class="t">MEMBERSHIPS</span></a><a class="rmi on" href="/visitor-passes" data-rail="passes"><span class="n">03</span><span class="t">VISITOR PASSES</span></a><a class="rmi" href="/our-equipments" data-rail="included"><span class="n">04</span><span class="t">WHAT YOU GET</span></a><a class="rmi" href="/#classes" data-rail="classes"><span class="n">05</span><span class="t">FREE CLASSES</span></a><a class="rmi" href="/personal-training" data-rail="pt"><span class="n">06</span><span class="t">PERSONAL TRAINING</span></a><a class="rmi" href="/#plus" data-rail="plus"><span class="n">07</span><span class="t">PLUS UPGRADE</span></a><a class="rmi" href="/#faq" data-rail="faq"><span class="n">08</span><span class="t">QUESTIONS</span></a><a class="rmi" href="/#connect" data-rail="connect"><span class="n">09</span><span class="t">APP &amp; SOCIAL</span></a><a class="rmi" href="/#guides" data-rail="guides"><span class="n">10</span><span class="t">HOW TO GUIDES</span></a></div>
+  <div class="railcta">
+    <a class="btn pri" id="railWa" href="https://wa.me/6588779895?text=Hi%20GoFit%20X%2C%20I%20have%20a%20question." target="_blank"><span class="ico" data-ico="wa"><svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.24.67-1.4 1.28-1.94 1.32-.5.04-1.13.06-1.82-.11a15 15 0 0 1-6.5-5.1c-.5-.7-.9-1.6-.9-2.5 0-.9.47-1.35.64-1.54.17-.19.38-.24.5-.24h.36c.12 0 .28-.04.44.34.16.4.56 1.37.6 1.47.05.1.08.22.01.35-.06.13-.1.21-.2.33l-.3.35c-.1.1-.2.21-.09.41.11.2.5.83 1.08 1.34.74.66 1.37.87 1.57.97.2.1.31.08.43-.05.11-.13.5-.58.63-.78.13-.2.26-.17.43-.1.18.06 1.13.53 1.32.63.2.1.32.14.37.22.05.09.05.5-.19 1.17Z"></path></svg></span><span class="lbl">WhatsApp us</span></a>
+    <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+      <span class="ico" data-ico="pin"><svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"></path></svg></span><span class="lbl">Directions</span></a>
+    <div class="railfoot">22 Lorong 18, Geylang<br>Singapore 398804<br><br>Open 24/7</div>
+  </div>
+</nav>
+
+<div id="app">
+  <section class="screen on" id="passes">
+    <div class="sechead"><a class="back" href="/"><span class="arrow">←</span>Menu</a></div>
+    <div class="sectitle">
+      <span class="eyebrow">Day & week passes · GoFit X Geylang</span>
+      <h1 class="agile" data-agile="VISITOR PASSES"><span class="pre">VISITOR PASSES</span></h1>
+      <p class="kick">In town for a few days? Train today. Card payment online, or pay at the desk during staffed hours. Instructions arrive by email.</p>
+    </div>
+    <div class="list" id="listPasses"><div class="card"><div class="row"><div class="roundel"><span class="cur">$</span><span class="amt">28</span><span class="per">/DAY</span></div><div class="info"><div class="nm">1 DAY</div><div class="meta">24 hours of everything, including one HydroMassage Lounger session.</div></div></div><div class="cta"><a class="btn pri" href="https://evolutionwellness-sg.perfectgym.pl/clientportal2/registration/start?clubId=1&amp;productID=4" target="_blank" rel="noopener"><span class="lbl">Buy a day pass</span><span class="chev">→</span></a></div><button class="tc" data-tc="visitor">Read the T&amp;Cs</button></div><div class="card"><div class="row"><div class="roundel"><span class="cur">$</span><span class="amt">100</span><span class="per">/WEEK</span></div><div class="info"><div class="nm">7 DAYS</div><div class="meta">A full week, including seven HydroMassage Lounger sessions.</div></div></div><div class="cta"><a class="btn pri" href="https://evolutionwellness-sg.perfectgym.pl/clientportal2/registration/start?clubId=1&amp;productID=30&amp;redirectUrl=https://www.gofit-gym.com/sg/thank-you-purchase/geylang/" target="_blank" rel="noopener"><span class="lbl">Buy a week pass</span><span class="chev">→</span></a></div><button class="tc" data-tc="visitor">Read the T&amp;Cs</button></div></div>
+  </section>
+  <nav class="menu pagemenu" aria-label="More from GoFit X"><span class="mh">More from GoFit X</span><a class="mi" href="/#visit"><span class="n">01</span><span class="t">VISIT US<span class="d">Address, hours, free tour</span></span><span class="go">→</span></a><a class="mi" href="/our-membership-plans"><span class="n">02</span><span class="t">MEMBERSHIPS<span class="d">From $89 a month, no joining fee</span></span><span class="go">→</span></a><a class="mi" href="/our-equipments"><span class="n">04</span><span class="t">WHAT YOU GET<span class="d">Five floors, 60+ machines, recovery</span></span><span class="go">→</span></a><a class="mi" href="/#classes"><span class="n">05</span><span class="t">FREE CLASSES<span class="d">Rooftop HIIT, Animal Flow and more</span></span><span class="go">→</span></a><a class="mi" href="/personal-training"><span class="n">06</span><span class="t">PERSONAL TRAINING<span class="d">1-to-1 coaching from $65 an hour</span></span><span class="go">→</span></a><a class="mi" href="/#plus"><span class="n">07</span><span class="t">PLUS UPGRADE<span class="d">All clubs, recovery and a locker · $15 a month</span></span><span class="go">→</span></a><a class="mi" href="/#faq"><span class="n">08</span><span class="t">QUESTIONS<span class="d">Parking, showers, access, trials</span></span><span class="go">→</span></a><a class="mi" href="/#connect"><span class="n">09</span><span class="t">APP &amp; SOCIAL<span class="d">Door code in your pocket</span></span><span class="go">→</span></a><a class="mi" href="/#guides"><span class="n">10</span><span class="t">HOW TO GUIDES<span class="d">Step-by-step help for members</span></span><span class="go">→</span></a></nav>
+  <div class="foot">
+      GoFit X Gym Geylang · 22 Lorong 18, Singapore 398804<br>
+      <a href="mailto:geylang@gofit-gym.com.sg">geylang@gofit-gym.com.sg</a> ·
+      <a href="tel:+6588779895">+65 8877 9895</a><br><br>
+      © 2026 Managed by Fitbiz Pte Ltd · UEN 202124878G
+    </div>
+</div>
+
+<div id="actionbar">
+  <a class="btn pri" id="barWa" href="https://wa.me/6588779895?text=Hi%20GoFit%20X%2C%20I%20have%20a%20question."><span class="ico" data-ico="wa"><svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.24.67-1.4 1.28-1.94 1.32-.5.04-1.13.06-1.82-.11a15 15 0 0 1-6.5-5.1c-.5-.7-.9-1.6-.9-2.5 0-.9.47-1.35.64-1.54.17-.19.38-.24.5-.24h.36c.12 0 .28-.04.44.34.16.4.56 1.37.6 1.47.05.1.08.22.01.35-.06.13-.1.21-.2.33l-.3.35c-.1.1-.2.21-.09.41.11.2.5.83 1.08 1.34.74.66 1.37.87 1.57.97.2.1.31.08.43-.05.11-.13.5-.58.63-.78.13-.2.26-.17.43-.1.18.06 1.13.53 1.32.63.2.1.32.14.37.22.05.09.05.5-.19 1.17Z"></path></svg></span><span class="lbl">WhatsApp us</span></a>
+  <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+    <span class="ico" data-ico="pin"><svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"></path></svg></span><span class="lbl">Directions</span></a>
+</div>
+
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <div class="mhead">
+      <div class="mtitle" id="mTitle"></div>
+      <button class="mclose" id="mClose">CLOSE ✕</button>
+    </div>
+    <div class="mhours">Staffed: Mon–Fri 2pm–10pm · Sat 12pm–6pm</div>
+    <div class="mbody" id="mBody"></div>
+    <div class="mfoot">A summary of key terms for quick reference. It does not replace the full contract — where they differ, the signed contract applies.</div>
+  </div>
+</div>
+<script>
+var RHYTHM=[62,74,110,120,86,68];
+function setAgile(el){
+  var text=el.dataset.agile.replace(/&amp;/g,'&');
+  el.innerHTML='<span class="ln" style="display:block">'+text.split('').map(function(ch,i){
+    return ch===' '?'<span style="--w:100"> </span>'
+                   :'<span style="--w:'+RHYTHM[i%RHYTHM.length]+'">'+ch+'</span>';
+  }).join('')+'</span>';
+  fitLine(el);
+}
+function fitLine(el){
+  var ln=el.querySelector('.ln'); if(!ln)return;
+  var target=el.clientWidth-2;
+  if(target<40)return;
+  var spans=ln.querySelectorAll('span'),lo=-40,hi=40,best=-40;
+  function apply(d){
+    for(var i=0;i<spans.length;i++){
+      var base=parseFloat(spans[i].style.getPropertyValue('--w'))||100;
+      spans[i].style.fontVariationSettings="'wdth' "+Math.max(62,Math.min(125,base+d));
+    }
+  }
+  for(var s=0;s<14;s++){
+    var mid=(lo+hi)/2; apply(mid);
+    if(ln.getBoundingClientRect().width<target){lo=mid;best=mid;}else{hi=mid;}
+  }
+  apply(best);
+}
+function fitAll(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-agile]'),function(el){
+    if(el.querySelector('.ln'))fitLine(el);else setAgile(el);
+  });
+}
+
+var TCS={
+  plus:{title:'PLUS UPGRADE T&CS',items:[
+    ['Eligibility','Plus can be added to any active GoFit X membership, monthly contract or prepaid. It runs as a separate contract alongside your membership and does not change it.'],
+    ['Payment','$15 a month, billed by credit or debit card on the 1st of every month. Cash and PayNow are not accepted. Your first charge is pro rata for the days left in the month you start.'],
+    ['Cancellation','Plus runs month to month with a one calendar month minimum. Cancel any time with one full calendar month\u2019s notice, given before the end of the month prior.']
+  ]},
+  goal:{title:'GOAL MEMBERSHIP T&CS',items:[
+    ['Cancellation','Ending your membership before the 12-month minimum contract period is complete requires a departure fee of 50% of the remaining term, plus one full calendar month\u2019s notice. Once the term is complete the membership rolls month to month, and cancelling needs one full calendar month\u2019s written notice with all outstanding fees settled first.'],
+    ['Freezing','A freeze runs a full calendar month — no part months. Requests must be in by the 20th of the month before, and cannot be backdated. Frozen time does not count toward your minimum term and cannot cover your notice period. $14 per month of freeze.'],
+    ['Guest pass','Guests must complete a guest registration before entry. Members are responsible for their guest following the gym rules. Each guest pass is a single visit only, however it was obtained.'],
+    ['Abuse of membership','Management may terminate a membership immediately and without notice for any breach of the rules. Sharing credentials or helping anyone enter the gym is strictly forbidden. No tailgating, no sharing phones at the entrance.'],
+    ['Dress code','Proper gym attire at all times. Tops must cover the chest area, no torn clothing. Closed-toe, non-marking, rubber-soled shoes throughout, except the L5 chill zone and the deadlift platform.'],
+    ['Monthly dues','Fees are billed on the 1st of every calendar month. A $4 + GST fee applies to every failed payment attempt, and entry is denied until all dues are settled.']
+  ]},
+  term:{title:'PREPAID MEMBERSHIP T&CS',items:[
+    ['Membership term','Choose 1, 3, 6 or 12 months. The term runs continuously from the date of activation.'],
+    ['Voucher activation','Lazada purchases only. Vouchers must be redeemed within 7 days of purchase, or on activation, whichever comes first. If not redeemed in that window the system redeems it automatically and the membership counts as used.'],
+    ['Refunds','Once a membership is activated it is non-refundable.'],
+    ['Freezing','Prepaid memberships cannot be frozen. The term runs continuously from activation and the expiry date is fixed — it will not be extended for illness, travel, or facilities being unavailable.'],
+    ['Guest pass','Guests must complete a guest registration before entry. Members are responsible for their guest following the gym rules. Each guest pass is a single visit only.'],
+    ['Abuse of membership','Management may terminate a membership immediately and without notice for any breach of the rules. Sharing accounts or helping anyone enter the gym is strictly forbidden.'],
+    ['Dress code','Proper gym attire at all times. Tops must cover the chest area, no torn clothing. Closed-toe, non-marking, rubber-soled shoes throughout, except the L5 chill zone and the deadlift platform.']
+  ]},
+  visitor:{title:'VISITOR PASS T&CS',items:[
+    ['Day pass','One visit, no time limit on the visit. Must be used within 7 calendar days of purchase, after which it expires whether or not it has been used.'],
+    ['Week pass','Seven entries within 7 calendar days of purchase, used on the same day or spread out. Unused entries lapse with no refund or extension.'],
+    ['Access','Both passes give full access to the gym. Visitor pass holders cannot bring guests. Passes are personal and cannot be transferred.'],
+    ['Buying and registering','Buy online by Visa or Mastercard, or at the front desk during staffed hours. You must register online at the time of purchase and provide government photo ID.'],
+    ['Refunds and deferral','Strictly non-refundable once purchased, used or not. A pass may be deferred once only, before it has been used, at management\u2019s discretion, up to one calendar month from purchase.'],
+    ['Minimum age','14 years old as per local identification record. Under 18s need a parent or guardian\u2019s consent online at the time of purchase.'],
+    ['Health and safety','Bring a personal sweat towel — access can be denied without one. Wipe down equipment after use. No smoking or vaping anywhere on site, including the carpark. Do not train under the influence.']
+  ]}
+};
+var modal=document.getElementById('modal');
+function closeModal(){modal.classList.remove('on');}
+function openModal(key){
+  var t=TCS[key]; if(!t)return;
+  document.getElementById('mTitle').textContent=t.title;
+  document.getElementById('mBody').innerHTML=t.items.map(function(it){
+    return '<div class="mitem"><h4>'+it[0]+'</h4><p>'+it[1]+'</p></div>';}).join('');
+  document.getElementById('mBody').scrollTop=0;
+  modal.classList.add('on');
+}
+document.addEventListener('click',function(e){
+  var tc=e.target.closest('[data-tc]');
+  if(tc){openModal(tc.dataset.tc);return;}
+  if(e.target.closest('#mClose')||e.target===modal){closeModal();}
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fitAll,120);});
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitAll);}else{window.addEventListener('load',fitAll);}
+</script>
+</body>
+</html>

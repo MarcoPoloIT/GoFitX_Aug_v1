@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.gofitx.sg/</loc><lastmod>2026-10-13</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.gofitx.sg/pt-jason</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.gofitx.sg/pt-amit</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.gofitx.sg/pt-xin</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.gofitx.sg/</loc><lastmod>2026-10-14</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.gofitx.sg/our-membership-plans</loc><lastmod>2026-10-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.gofitx.sg/visitor-passes</loc><lastmod>2026-10-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.gofitx.sg/personal-training</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.gofitx.sg/our-equipments</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.gofitx.sg/pt-jason</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.gofitx.sg/pt-amit</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.gofitx.sg/pt-xin</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
 </urlset>

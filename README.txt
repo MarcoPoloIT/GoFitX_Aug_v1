@@ -3,6 +3,11 @@ GoFit X Geylang — website + member guides
 
 CONTENTS
   index.html                                the site (menu items 01–10)
+  our-membership-plans.html                 02 › MEMBERSHIPS        (own page, for SEO)
+  visitor-passes.html                       03 › VISITOR PASSES     (own page, for SEO)
+  our-equipments.html                       04 › WHAT YOU GET       (own page, for SEO)
+  personal-training.html                    06 › PERSONAL TRAINING  (own page, for SEO)
+  pt-jason.html, pt-amit.html, pt-xin.html  06 › trainer profiles
   mobile-app-tutorial.html                  10 › GOFIT APP TUTORIAL
   guest-registration-tutorial.html          10 › TRIAL REGISTRATION
   plus-upgrade-tutorial.html                10 › UPGRADE TO PLUS
@@ -12,6 +17,14 @@ CONTENTS
   lazada-membership-renewal.html            10 › LAZADA PURCHASED TERM RENEWAL
 
   img/                                      all photos, screenshots, logo, icons
+  about-us.html, contact-us.html, faq.html, redirects from the old Wix URLs —
+  our-classes.html, photo-gallery.html,     keep them so old links and Google
+  terms-of-use.html, privacy-policy.html,   rankings carry over. Each one just
+  monthly-membership.html,                  forwards to the new page.
+  term-memberships.html,
+  gym-rules-and-etiquette.html,
+  our-personal-trainers.html,
+  personal-trainer-*.html
   robots.txt, sitemap.xml, favicon.ico      search engine files — keep at the root
 
   Photos and screenshots live in img/ (self-hosted, no external image
@@ -42,8 +55,12 @@ GUIDES ARE UNLISTED
   reachable from menu 10 if a member goes looking.
 
 EDITING
-  index.html   MENU, GUIDES, MEMBERSHIPS, PASSES, PT, FLOORS, CLASSES,
-               TCS — all near the top of the script
+  index.html   MENU, GUIDES, CLASSES, PLUS, TCS (Plus only) — near the
+               top of the script
+  Memberships, visitor passes, personal training and What You Get are
+  plain HTML in their own pages — edit prices, plans, T&Cs and photos
+  there. Prices also appear in index.html (home ticker, FAQ, menu
+  subtitles, JSON-LD) — keep them in step.
                FAQs are plain HTML in the QUESTIONS section (id="faqList").
                When you edit a FAQ, edit the matching Question in the
                JSON-LD in <head> too — the two must say the same thing.

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /feeds/
 
 Sitemap: https://www.gofitx.sg/sitemap.xml

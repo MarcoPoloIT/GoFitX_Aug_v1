@@ -11,16 +11,19 @@
 <link rel="canonical" href="https://www.gofitx.sg/voucher-new-membership-activation">
 <meta name="description" content="GoFit member guide — not for public listing.">
 <meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900&family=Hanken+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
+picture{display:contents}
 /* ============================================================
    GoFit X — member job aid  ·  step-by-step template v1
    Same theme as the main site. Steps are deep-linkable (#step-4)
    so staff can send someone straight to where they're stuck.
    ============================================================ */
 :root{
+  color-scheme:dark;
   --yellow:#FCD900;--black:#000;--red:#FF536C;--teal:#47D5CD;
   --surface:#0e0e0e;--line:#242424;
   --display:'Archivo','Arial Narrow',Arial,sans-serif;
@@ -240,7 +243,9 @@ var STEPS=[
    BUILD
    ================================================================ */
 var LOGO='img/gofitx-logo.png';
-document.querySelector('.crumb .lockup').innerHTML='<img src="'+LOGO+'" alt="GoFit X Gym Geylang">';
+/* <source> tags for the AVIF/WebP siblings of a JPG/PNG; the original stays as the <img> fallback */
+function srcs(u){var b=u.replace(/\.(jpe?g|png)$/i,'');return '<source type="image/avif" srcset="'+b+'.avif">'+'<source type="image/webp" srcset="'+b+'.webp">';}
+document.querySelector('.crumb .lockup').innerHTML='<picture>'+srcs(LOGO)+'<img src="'+LOGO+'" alt="GoFit X Gym Geylang" width="545" height="680"></picture>';
 document.getElementById('gmeta').innerHTML=GUIDE.intro;
 document.getElementById('gcount').innerHTML='<b>'+STEPS.length+' steps</b> · '+GUIDE.time;
 
@@ -249,7 +254,7 @@ document.getElementById('steps').innerHTML=STEPS.map(function(s,i){
   var shots=sh.length?'<div class="shots'+(sh.length===1?' single':'')+'">'+
     sh.map(function(p,j){
       return '<figure class="shot">'+
-        '<img src="'+p.u+'" alt="'+p.a+'" loading="lazy" decoding="async">'+
+        '<picture>'+srcs(p.u)+'<img src="'+p.u+'" alt="'+p.a+'" loading="lazy" decoding="async"></picture>'+
         '<figcaption class="shotlbl">'+p.l+'</figcaption></figure>';
     }).join('')+'</div>':'';
   var warn=s.warn?'<div class="warn"><span class="wh">'+s.warn.h+'</span>'+

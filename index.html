@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>GoFit X Gym Geylang — 24/7 Gym near Aljunied MRT</title>
 <meta name="description" content="Geylang's 24/7 gym. 12,000 sq ft, 60+ machines, free classes, free parking. WhatsApp us for a free tour.">
+<link rel="alternate" hreflang="en" href="https://www.gofitx.sg/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gofitx.sg/zh/">
+<link rel="alternate" hreflang="x-default" href="https://www.gofitx.sg/">
 <link rel="canonical" href="https://www.gofitx.sg/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GoFit X Gym Geylang">
@@ -332,6 +335,24 @@ body{background:#000;color:#fff;font-family:var(--body);
   padding:13px 24px;font:800 12px/1 var(--body);letter-spacing:.2em;
   animation:blink 2.4s steps(1) infinite}
 @keyframes blink{0%,70%{opacity:1}71%,100%{opacity:.25}}
+
+/* ---------- language picker (splash) + toggle ---------- */
+#splash{flex-direction:column;cursor:default}
+#splash .pick{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px;
+  margin-top:-26px;background:#000;border-radius:28px;padding:14px 14px 16px;box-shadow:0 0 50px 30px rgba(0,0,0,.95)}
+#splash .pick .cue{animation:blink 2.4s steps(1) infinite;border:0;padding:0;letter-spacing:.16em;font-size:11px}
+#splash .pick .row{display:flex;gap:10px}
+.status{white-space:nowrap}
+#splash .lp{background:var(--yellow);color:#000;border:0;border-radius:99px;cursor:pointer;
+  min-width:128px;padding:17px 22px;font:800 15px/1 var(--body);letter-spacing:.12em}
+#splash .lp[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:17px;letter-spacing:.2em}
+#splash .lp:hover{background:#fff}
+#splash .lp:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.langsw{flex:none;color:var(--yellow);border:1.5px solid var(--yellow);border-radius:99px;
+  padding:7px 12px;font:800 12px/1 var(--body);letter-spacing:.08em;text-decoration:none}
+.langsw[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:.12em}
+.railfoot .langsw{display:inline-block;margin-top:14px}
 #splash .ticker{position:absolute;top:0;left:0;right:0;z-index:3;
   padding-top:calc(13px + env(safe-area-inset-top))}
 
@@ -721,7 +742,7 @@ a.mi,a.rmi{text-decoration:none}
     <a class="btn pri" id="railWa"><span class="ico" data-ico="wa"></span><span class="lbl">WhatsApp us</span></a>
     <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
       <span class="ico" data-ico="pin"></span><span class="lbl">Directions</span></a>
-    <div class="railfoot">22 Lorong 18, Geylang<br>Singapore 398804<br><br>Open 24/7</div>
+    <div class="railfoot">22 Lorong 18, Geylang<br>Singapore 398804<br><br>Open 24/7<br><a class="langsw" href="zh/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a></div>
   </div>
 </nav>
 
@@ -733,6 +754,7 @@ a.mi,a.rmi{text-decoration:none}
     <div class="topbar">
       <div class="lockup" id="lockHome"></div>
       <div class="status" id="status"><span class="dot"></span><span id="statusText">Open now</span></div>
+      <a class="langsw" href="zh/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh">中文</a>
     </div>
 
     <div class="hero">
@@ -890,11 +912,17 @@ a.mi,a.rmi{text-decoration:none}
 </div>
 
 <!-- ============ SPLASH — sound wall, shown once ============ -->
-<div id="splash" role="button" tabindex="0" aria-label="Enter site">
+<div id="splash" role="dialog" aria-label="Choose language · 选择语言">
   <div class="wall" id="wall"></div>
   <div class="core">
     <div class="lockup" id="lockSplash"></div>
-    <div class="cue">TAP TO ENTER</div>
+  </div>
+  <div class="pick">
+    <div class="cue">CHOOSE LANGUAGE · 选择语言</div>
+    <div class="row">
+      <button type="button" class="lp" lang="en" data-lang="en">ENGLISH</button>
+      <button type="button" class="lp" lang="zh-Hans" data-lang="zh">中文</button>
+    </div>
   </div>
   <div class="ticker"><div id="splashTick"></div></div>
 </div>
@@ -1189,11 +1217,20 @@ function removeSplashNow(){
   splash=null;
   document.body.style.overflow='';
 }
+/* language picker: same language closes the splash, the other one goes to that version */
+var LANG_KEY='gofitx.lang', PAGE_LANG='en', OTHER_HREF='zh/';
 if(splash){
-  splash.addEventListener('pointerdown',dismissSplash);
-  splash.addEventListener('keydown',function(e){
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();dismissSplash();}});
+  Array.prototype.forEach.call(splash.querySelectorAll('.lp'),function(b){
+    b.addEventListener('click',function(){
+      try{localStorage.setItem(LANG_KEY,b.dataset.lang);}catch(e){}
+      if(b.dataset.lang===PAGE_LANG){dismissSplash();}
+      else{markSplashSeen();location.href=OTHER_HREF;}
+    });
+  });
 }
+Array.prototype.forEach.call(document.querySelectorAll('.langsw'),function(a){
+  a.addEventListener('click',function(){try{localStorage.setItem(LANG_KEY,a.dataset.lang);}catch(e){}});
+});
 
 /* fill icon placeholders */
 Array.prototype.forEach.call(document.querySelectorAll('[data-ico]'),function(el){

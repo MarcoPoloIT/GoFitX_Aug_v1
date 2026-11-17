@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GoFit X 芽笼健身房 — 阿裕尼地铁站附近的24小时健身房</title>
+<meta name="description" content="芽笼的24小时健身房。12,000平方尺，60多台器械，免费课程，免费停车。WhatsApp我们，预约免费参观。">
+<link rel="alternate" hreflang="en" href="https://www.gofitx.sg/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gofitx.sg/zh/">
+<link rel="alternate" hreflang="x-default" href="https://www.gofitx.sg/">
+<link rel="canonical" href="https://www.gofitx.sg/zh/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoFit X Gym Geylang">
+<meta property="og:locale" content="zh_SG">
+<meta property="og:url" content="https://www.gofitx.sg/zh/">
+<meta property="og:title" content="GoFit X 芽笼健身房 — 阿裕尼地铁站附近的24小时健身房">
+<meta property="og:description" content="芽笼的24小时健身房。12,000平方尺，60多台器械，免费课程，免费停车。WhatsApp我们，预约免费参观。">
+<meta property="og:image" content="https://www.gofitx.sg/img/img-6095.jpg">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="GoFit X 芽笼健身房的自由重量区">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GoFit X 芽笼健身房 — 阿裕尼地铁站附近的24小时健身房">
+<meta name="twitter:description" content="芽笼的24小时健身房。12,000平方尺，60多台器械，免费课程，免费停车。WhatsApp我们，预约免费参观。">
+<meta name="twitter:image" content="https://www.gofitx.sg/img/img-6095.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900&family=Hanken+Grotesk:wght@400;500;700;800&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+picture{display:contents}
+/* ============================================================
+   GoFit X Geylang — mobile-first site  ·  prototype v1
+   Design template: Fittar mirror kiosk v9
+   Colour + type per GOFIT Brand Guideline v.1
+   Primary action throughout: WhatsApp / visit us
+   ============================================================ */
+:root{
+  color-scheme:dark;
+  --yellow:#FCD900;
+  --black:#000000;
+  --red:#FF536C;
+  --teal:#47D5CD;
+  --blue:#0080BA;
+  --surface:#0e0e0e;
+  --line:#242424;
+  --display:'Archivo','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;   /* stand-in for Cindie Mono */
+  --body:'Hanken Grotesk','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;    /* stand-in for GT Walsheim */
+  --pad:20px;
+  --bar:76px;   /* sticky action bar height */
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{background:#000;color:#fff;font-family:var(--body);
+  min-height:100dvh;overflow-x:hidden}
+
+/* desktop just centres the phone column — mobile is the real design */
+#app{max-width:560px;margin:0 auto;position:relative;min-height:100dvh;
+  border-left:1px solid var(--line);border-right:1px solid var(--line)}
+@media (max-width:600px){#app{border:0}}
+
+/* ---------- type ---------- */
+.agile{font-family:var(--display);font-weight:700;text-transform:uppercase;overflow:hidden;
+  line-height:.88;white-space:nowrap;display:block;color:var(--yellow)}
+.agile span{font-variation-settings:'wdth' var(--w,100)}
+.agile .pre{visibility:hidden}
+.eyebrow{font:800 11px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.kick{font:500 16px/1.5 var(--body);color:rgba(255,255,255,.74);margin-top:12px}
+
+/* ---------- screens ---------- */
+.screen{display:none;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom) + 24px)}
+.screen.on{display:block}
+
+/* ---------- home ---------- */
+.topbar{display:flex;align-items:center;gap:12px;padding:18px var(--pad) 0}
+.topbar .lockup{width:104px;flex:none}
+.topbar .lockup img{width:100%;height:auto;display:block}
+.status{margin-left:auto;display:flex;align-items:center;gap:7px;
+  font:800 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;
+  border:1.5px solid var(--yellow);color:var(--yellow);border-radius:99px;padding:8px 12px}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);
+  animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.hero{padding:26px var(--pad) 0}
+.hero .agile{font-size:13vw}
+@media (min-width:560px){.hero .agile{font-size:72px}}
+.hero .kick{max-width:34ch}
+
+.proof{display:flex;gap:0;margin:22px var(--pad) 0;border:1px solid var(--line)}
+.proof a,.proof div{flex:1;padding:13px 10px;text-align:center;text-decoration:none;
+  border-right:1px solid var(--line);color:#fff}
+.proof a:last-child,.proof div:last-child{border-right:0}
+.proof .big{display:block;font-family:var(--display);font-weight:700;font-size:22px;
+  font-variation-settings:'wdth' 100;color:var(--yellow);line-height:1}
+.proof .lbl{display:block;font:600 11px/1.35 var(--body);letter-spacing:.06em;
+  text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:7px}
+
+/* ---------- primary actions ---------- */
+.acts{padding:22px var(--pad) 4px;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;gap:12px;width:100%;border:0;cursor:pointer;
+  font-family:var(--body);text-decoration:none;padding:17px 18px;text-align:left}
+.btn .lbl{font:800 15px/1.15 var(--body);letter-spacing:.02em}
+.btn .sub{display:block;font:500 12px/1.3 var(--body);opacity:.7;margin-top:4px;letter-spacing:0}
+.btn .ico{width:22px;height:22px;flex:none}
+.btn .chev{margin-left:auto;font-family:var(--display);font-weight:700;font-size:20px}
+.btn.pri{background:var(--yellow);color:#000}
+.btn.sec{background:transparent;color:#fff;border:2px solid #2e2e2e}
+.btn.sec .chev{color:var(--yellow)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* ---------- menu ---------- */
+.menu{margin-top:26px;border-top:1px solid var(--line)}
+.mi{display:flex;align-items:center;gap:16px;width:100%;background:#000;color:#fff;
+  border:0;border-bottom:1px solid var(--line);padding:20px var(--pad);cursor:pointer;
+  text-align:left;font-family:var(--body)}
+.mi .n{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 62;
+  font-size:15px;color:var(--yellow);width:22px;flex:none}
+.mi .t{font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:23px;line-height:.95;font-variation-settings:'wdth' 100}
+.mi .d{display:block;font-family:var(--body);font-weight:500;font-size:14px;
+  line-height:1.45;text-transform:none;color:rgba(255,255,255,.6);margin-top:6px;
+  font-variation-settings:'wdth' 100}
+.mi .go{margin-left:auto;font-family:var(--display);font-weight:700;font-size:22px;color:var(--yellow)}
+.mi:active{background:#0d0d0d}
+.mi:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--yellow);color:#000;padding:13px 0;overflow:hidden}
+#home .ticker{padding-top:calc(13px + env(safe-area-inset-top))}
+.ticker div{display:flex;gap:26px;white-space:nowrap;font:800 12px/1 var(--body);
+  letter-spacing:.14em;width:max-content;animation:slide 32s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.foot{padding:26px var(--pad);font:500 13.5px/1.7 var(--body);color:rgba(255,255,255,.4)}
+.foot a{color:rgba(255,255,255,.55)}
+
+/* ---------- section headers ---------- */
+.sechead{position:sticky;top:0;z-index:20;background:#000;border-bottom:1px solid var(--line);
+  padding:calc(env(safe-area-inset-top) + 8px) var(--pad) 12px}
+.back{display:flex;align-items:center;gap:9px;background:transparent;border:0;cursor:pointer;
+  font:800 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);
+  padding:10px 4px 10px 0;font-family:var(--body)}
+.back .arrow{font-family:var(--display);font-weight:700;font-size:17px;line-height:1}
+.sectitle{padding:20px var(--pad) 22px}
+.sectitle .agile{font-size:11.5vw}
+@media (min-width:560px){.sectitle .agile{font-size:64px}}
+
+.list{padding:0 var(--pad)}
+
+/* ---------- price cards ---------- */
+.card{background:var(--surface);border-left:6px solid var(--yellow);padding:18px;margin-bottom:12px}
+.card .row{display:flex;align-items:center;gap:16px}
+.roundel{width:82px;height:82px;border-radius:50%;background:#000;color:var(--yellow);flex:none;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:2px solid #1d1d1d}
+.roundel .cur{font-family:var(--display);font-weight:700;font-size:12px;line-height:1}
+.roundel .amt{font-family:var(--display);font-weight:700;font-size:34px;line-height:.85;
+  font-variation-settings:'wdth' 108}
+.roundel .per{font-family:var(--display);font-weight:700;font-size:10px;line-height:1;letter-spacing:.05em}
+.card .info{flex:1;min-width:0}
+.card .nm{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:26px;
+  line-height:.95;font-variation-settings:'wdth' 106}
+.card .meta{font:500 15.5px/1.5 var(--body);color:rgba(255,255,255,.74);margin-top:9px}
+.card .cta{margin-top:15px}
+.card .cta .btn{padding:14px 16px;justify-content:center}
+.card .cta .btn .lbl{font-size:14px}
+.flag{display:inline-block;background:var(--yellow);color:#000;font:800 11px/1 var(--body);
+  letter-spacing:.14em;padding:7px 9px;margin-bottom:9px}
+.tc{background:none;border:0;padding:8px 0 0;cursor:pointer;font:700 12px/1.2 var(--body);
+  color:var(--yellow);text-decoration:underline;text-underline-offset:4px;font-family:var(--body)}
+
+.grouphead{border-top:3px solid var(--yellow);padding:18px 0 12px;margin-top:8px}
+.grouphead:first-child{margin-top:0}
+.grouphead .gl{display:block;font:800 13px/1 var(--body);letter-spacing:.24em;
+  text-transform:uppercase;color:var(--yellow)}
+.grouphead .gn{display:block;font:500 13px/1.45 var(--body);color:rgba(255,255,255,.6);margin-top:9px}
+
+.note{background:var(--yellow);color:#000;padding:18px;margin-bottom:14px}
+.note .nh{display:block;font:800 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.note .nb{display:block;font:500 15.5px/1.5 var(--body);margin-top:10px}
+
+/* ---------- facts / info rows ---------- */
+.fact{display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.fact:first-child{border-top:0}
+.fact .k{font-family:var(--display);font-weight:700;font-size:30px;line-height:.9;color:var(--yellow);
+  font-variation-settings:'wdth' 108;min-width:88px}
+.fact .v{font:500 15.5px/1.5 var(--body)}
+
+.block{background:var(--surface);padding:18px;margin-bottom:12px}
+/* ---------- trainer cards ---------- */
+.xpert{display:flex;align-items:center;gap:15px;background:var(--surface);padding:12px;margin-bottom:10px;
+  text-decoration:none;color:#fff;border-left:6px solid var(--teal)}
+.xpert:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.xpert .xp{width:72px;height:72px;flex:0 0 72px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.xpert .xp img{width:100%;height:100%;object-fit:cover;display:block}
+.xpert .xi{font-family:var(--display);font-weight:700;font-size:40px;color:var(--yellow);line-height:1}
+.xpert .xt{flex:1;min-width:0}
+.xpert .xn{display:block;font-family:var(--display);font-weight:700;font-size:24px;line-height:1;text-transform:uppercase}
+.xpert .xd{display:block;font:500 14.5px/1.4 var(--body);color:rgba(255,255,255,.7);margin-top:6px}
+.xpert .go{font:800 20px/1 var(--body);color:var(--yellow);padding-right:4px}
+.block h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:21px;
+  line-height:.98;font-variation-settings:'wdth' 106;color:#fff}
+.block .tagline{font:800 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:9px}
+.block p{font:500 15.5px/1.55 var(--body);color:rgba(255,255,255,.75);margin-top:10px}
+.block .lines{margin-top:12px;font:500 15.5px/1.75 var(--body);color:rgba(255,255,255,.8)}
+.block .lines b{font-weight:800;color:#fff}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font:700 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid #2c2c2c;color:rgba(255,255,255,.75);padding:9px 11px}
+
+/* ---------- accordion ---------- */
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;align-items:center;gap:14px;background:none;border:0;
+  cursor:pointer;padding:18px 0;text-align:left;color:#fff;font-family:var(--body)}
+.qa .q{font:800 16px/1.35 var(--body);flex:1}
+.qa .pm{font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow);
+  line-height:1;transition:transform .2s ease}
+.qa.open .pm{transform:rotate(45deg)}
+.qa .a{display:none;padding:0 0 18px;font:500 15.5px/1.6 var(--body);color:rgba(255,255,255,.76)}
+.qa.open .a{display:block}
+.qa .a b{color:#fff}
+
+/* ---------- how to guides ---------- */
+.glink{display:flex;align-items:flex-start;gap:14px;background:var(--surface);
+  border-left:6px solid var(--yellow);padding:17px;margin-bottom:11px;text-decoration:none;color:#fff}
+.glink .gn{font-family:var(--display);font-weight:700;font-size:19px;line-height:1;
+  color:var(--yellow);font-variation-settings:'wdth' 100;min-width:26px;padding-top:2px}
+.glink .gt{flex:1;font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:19px;line-height:1.05;font-variation-settings:'wdth' 100}
+.glink .gd{display:block;font-family:var(--body);font-weight:500;font-size:15px;line-height:1.5;
+  text-transform:none;color:rgba(255,255,255,.62);margin-top:8px;font-variation-settings:'wdth' 100}
+.glink .gm{display:block;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--yellow);margin-top:9px;font-variation-settings:'wdth' 100}
+.glink .go{font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow);padding-top:2px}
+.glink:active{background:#141414}
+
+/* ---------- socials ---------- */
+.social{display:flex;align-items:center;gap:16px;background:var(--surface);padding:16px;
+  margin-bottom:12px;text-decoration:none;color:#fff}
+.social.tiktok{border-left:6px solid var(--teal)}
+.social.instagram{border-left:6px solid var(--red)}
+.social.facebook{border-left:6px solid var(--blue)}
+.social.app{border-left:6px solid var(--yellow)}
+.social.play{border-left:6px solid var(--blue)}
+.social .glyph{width:38px;height:38px;flex:none}
+.social .nm{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:20px;
+  font-variation-settings:'wdth' 106;line-height:1}
+.social .handle{font:700 13px/1.2 var(--body);color:var(--yellow);margin-top:6px}
+.social .meta{font:500 14.5px/1.5 var(--body);color:rgba(255,255,255,.6);margin-top:5px}
+.social .go{margin-left:auto;font-family:var(--display);font-weight:700;font-size:20px;color:var(--yellow)}
+
+/* ---------- sticky action bar ---------- */
+#actionbar{position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+  display:flex;gap:9px;max-width:560px;margin:0 auto}
+#actionbar .btn{padding:15px 14px;justify-content:center;flex:1}
+#actionbar .btn .lbl{font-size:13.5px}
+#actionbar .btn.sec{flex:0 0 42%}
+
+/* ---------- floor gallery ---------- */
+.floor{padding:20px 0 4px;border-top:1px solid var(--line)}
+.floor:first-child{border-top:0;padding-top:4px}
+.floorhead{display:flex;align-items:baseline;gap:12px;padding:0 var(--pad) 12px}
+.floorhead .fl{font-family:var(--display);font-weight:700;font-size:30px;line-height:1;
+  color:var(--yellow);font-variation-settings:'wdth' 108}
+.floorhead .fn{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:19px;
+  line-height:1;font-variation-settings:'wdth' 104}
+.floorhead .fc{margin-left:auto;font:700 11px/1 var(--body);color:rgba(255,255,255,.42)}
+.strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:0 var(--pad) 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.shot{flex:0 0 78%;scroll-snap-align:start;position:relative;background:#141414;
+  border:0;padding:0;cursor:pointer;aspect-ratio:4/3;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));text-align:left;
+  font:700 11px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.grouplabel{display:flex;align-items:baseline;gap:10px;padding:2px var(--pad) 9px}
+.grouplabel .gt{font:800 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.grouplabel .fc{margin-left:auto;font:700 11px/1 var(--body);color:rgba(255,255,255,.42)}
+.strip+.grouplabel{padding-top:16px}
+.floordesc{font:500 15.5px/1.55 var(--body);color:rgba(255,255,255,.74);padding:13px var(--pad) 0}
+.floor.empty{display:flex;align-items:baseline;gap:12px;padding:18px var(--pad) 18px}
+.floor.empty .fl{font-family:var(--display);font-weight:700;font-size:24px;color:var(--yellow);
+  font-variation-settings:'wdth' 108;line-height:1}
+.floor.empty .fn{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:17px;
+  font-variation-settings:'wdth' 104}
+.floor.empty .fd{font:500 12.5px/1.4 var(--body);color:rgba(255,255,255,.55);flex:1}
+
+/* ---------- lightbox ---------- */
+#lb{position:fixed;inset:0;z-index:95;display:none;background:#000;flex-direction:column}
+#lb.on{display:flex}
+#lb .lbtop{display:flex;align-items:center;gap:12px;
+  padding:calc(env(safe-area-inset-top) + 14px) var(--pad) 12px}
+#lb .lbt{flex:1;font:800 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
+#lb .lbx{background:var(--yellow);color:#000;border:0;cursor:pointer;
+  font:800 12px/1 var(--body);letter-spacing:.1em;padding:13px 15px}
+#lb .lbstrip{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  align-items:center;scrollbar-width:none}
+#lb .lbstrip::-webkit-scrollbar{display:none}
+#lb .lbstrip img{flex:0 0 100%;scroll-snap-align:center;width:100%;
+  max-height:70dvh;object-fit:contain}
+#lb .lbcap{padding:12px var(--pad) calc(20px + env(safe-area-inset-bottom));
+  font:500 12.5px/1.5 var(--body);color:rgba(255,255,255,.6)}
+
+/* ---------- splash / sound wall (shown once) ---------- */
+#splash{position:fixed;inset:0;z-index:200;background:#000;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:opacity .45s ease}
+#splash.out{opacity:0;pointer-events:none}
+#splash .wall{position:absolute;inset:-24% -70%;transform:rotate(-9deg);
+  display:flex;flex-direction:column;justify-content:space-between}
+.wallrow{font-family:var(--display);font-weight:700;font-size:15vw;line-height:.86;
+  color:var(--yellow);white-space:nowrap;will-change:transform}
+@media (min-width:560px){.wallrow{font-size:84px}}
+.wallrow.l{animation:slideL 15s linear infinite}
+.wallrow.r{animation:slideR 19s linear infinite}
+@keyframes slideL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#splash .core{position:relative;z-index:2;width:74vw;height:74vw;max-width:340px;max-height:340px;
+  border-radius:50%;background:#000;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:24px;box-shadow:0 0 0 16px #000,0 0 90px 60px rgba(0,0,0,.96)}
+#splash .lockup{width:56%}
+#splash .lockup img{width:100%;height:auto;display:block}
+#splash .cue{color:var(--yellow);border:2.5px solid var(--yellow);border-radius:99px;
+  padding:13px 24px;font:800 12px/1 var(--body);letter-spacing:.2em;
+  animation:blink 2.4s steps(1) infinite}
+@keyframes blink{0%,70%{opacity:1}71%,100%{opacity:.25}}
+
+/* ---------- Chinese type tuning ---------- */
+.agile{line-height:1.08;font-weight:900;letter-spacing:.02em}
+.agile .ln{display:inline-block!important}
+.kick,.block p,.a,.nb,.mitem p{line-height:1.75}
+.mi .t{font-size:22px;line-height:1.2;letter-spacing:.04em}
+.mi .d{line-height:1.6}
+.btn .lbl{letter-spacing:.04em}
+.proof .lbl{letter-spacing:.02em}
+.eyebrow,.tagline,.gl,.nh{letter-spacing:.12em}
+
+/* ---------- language picker (splash) + toggle ---------- */
+#splash{flex-direction:column;cursor:default}
+#splash .pick{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px;
+  margin-top:-26px;background:#000;border-radius:28px;padding:14px 14px 16px;box-shadow:0 0 50px 30px rgba(0,0,0,.95)}
+#splash .pick .cue{animation:blink 2.4s steps(1) infinite;border:0;padding:0;letter-spacing:.16em;font-size:11px}
+#splash .pick .row{display:flex;gap:10px}
+.status{white-space:nowrap}
+#splash .lp{background:var(--yellow);color:#000;border:0;border-radius:99px;cursor:pointer;
+  min-width:128px;padding:17px 22px;font:800 15px/1 var(--body);letter-spacing:.12em}
+#splash .lp[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:17px;letter-spacing:.2em}
+#splash .lp:hover{background:#fff}
+#splash .lp:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.langsw{flex:none;color:var(--yellow);border:1.5px solid var(--yellow);border-radius:99px;
+  padding:7px 12px;font:800 12px/1 var(--body);letter-spacing:.08em;text-decoration:none}
+.langsw[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:.12em}
+.railfoot .langsw{display:inline-block;margin-top:14px}
+#splash .ticker{position:absolute;top:0;left:0;right:0;z-index:3;
+  padding-top:calc(13px + env(safe-area-inset-top))}
+
+/* ---------- modal ---------- */
+#modal{margin:auto auto 0;padding:0;border:0;width:100%;max-width:560px;max-height:88dvh;
+  background:#0e0e0e;color:#fff;border-top:8px solid var(--yellow);overscroll-behavior:contain}
+#modal[open]{display:flex;flex-direction:column;animation:up .22s ease-out}
+#modal::backdrop{background:rgba(0,0,0,.86);overflow:hidden;overscroll-behavior:contain}
+@keyframes up{from{transform:translateY(24px)}to{transform:translateY(0)}}
+.mhead{display:flex;align-items:center;gap:14px;padding:20px var(--pad) 12px}
+.mtitle{flex:1;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:24px;
+  line-height:1;color:var(--yellow);font-variation-settings:'wdth' 104}
+.mclose{background:var(--yellow);color:#000;border:0;cursor:pointer;font-family:var(--body);
+  font:800 12px/1 var(--body);letter-spacing:.1em;padding:13px 15px}
+.mhours{background:var(--yellow);color:#000;font:800 12px/1.4 var(--body);padding:12px var(--pad)}
+.mbody{overflow-y:auto;padding:4px var(--pad) 0;-webkit-overflow-scrolling:touch}
+.mitem{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.mitem h4{font:800 15.5px/1.35 var(--body);color:#fff;margin-bottom:7px}
+.mitem p{font:400 15px/1.55 var(--body);color:rgba(255,255,255,.72)}
+.mfoot{padding:14px var(--pad) calc(20px + env(safe-area-inset-bottom));
+  font:500 11.5px/1.5 var(--body);color:rgba(255,255,255,.4)}
+
+
+/* ================================================================
+   DESKTOP / LANDSCAPE  —  everything below only applies at 900px+.
+   The mobile build above is untouched.
+   ================================================================ */
+#rail{display:none}
+
+@media (min-width:900px){
+  :root{--pad:34px}
+
+  #app{max-width:none;margin:0 0 0 268px;border:0}
+  .screen{padding-bottom:64px}
+  #actionbar{display:none}
+
+  /* ---- left rail ---- */
+  #rail{display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;width:268px;
+    z-index:50;background:#000;border-right:1px solid var(--line);padding:26px 0 22px}
+  .raillogo{background:none;border:0;cursor:pointer;padding:0 22px 24px;text-align:left}
+  .raillogo span{display:block;width:118px}
+  .raillogo img{width:100%;height:auto;display:block}
+  .railmenu{flex:1;overflow-y:auto}
+  .rmi{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;cursor:pointer;
+    text-align:left;font-family:var(--body);padding:12px 22px;border-left:3px solid transparent}
+  .rmi .n{font-family:var(--display);font-weight:700;font-variation-settings:'wdth' 62;
+    font-size:12px;color:var(--yellow);width:18px;flex:none}
+  .rmi .t{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;
+    line-height:1.05;font-variation-settings:'wdth' 100;color:rgba(255,255,255,.72)}
+  .rmi:hover .t{color:#fff}
+  .rmi.on{background:#0f0f0f;border-left-color:var(--yellow)}
+  .rmi.on .t{color:#fff}
+  .rmi:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+  .railcta{padding:18px 22px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+  .railcta .btn{padding:14px;justify-content:flex-start}
+  .railcta .btn .lbl{font-size:13px}
+  .railfoot{font:500 11.5px/1.6 var(--body);color:rgba(255,255,255,.38);padding-top:16px}
+
+  /* ---- home ---- */
+  .topbar .lockup{display:none}
+  .topbar{padding:24px var(--pad) 0}
+  #home .menu{display:none}          /* the rail is the menu now */
+  #home .ticker{padding-top:13px}
+  .hero{padding:34px var(--pad) 0;max-width:1040px}
+  .hero .agile{font-size:104px}
+  .hero .kick{font-size:18px;max-width:52ch}
+  .proof{max-width:1040px;margin-left:var(--pad);margin-right:var(--pad)}
+  .proof .big{font-size:30px}
+  .acts{flex-direction:row;max-width:1040px;gap:12px}
+  .acts .btn{flex:1}
+  .foot{max-width:1040px}
+
+  /* ---- sections ---- */
+  .sechead{display:none}             /* rail handles navigation */
+  .sectitle{padding:38px var(--pad) 26px;max-width:1040px}
+  .sectitle .agile{font-size:78px}
+  .sectitle .kick{font-size:17px;max-width:60ch}
+  .list{max-width:1040px}
+
+  /* ---- gallery: strips become grids ---- */
+  #floorList{max-width:1040px}
+  .strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
+    overflow:visible;scroll-snap-type:none}
+  .shot{flex:none}
+  .shot:hover .cap{background:linear-gradient(transparent,rgba(0,0,0,.92))}
+  .floorhead .fc,.grouplabel .fc{display:none}   /* no swipe, no counter */
+  .floordesc{max-width:74ch}
+
+  /* ---- price cards side by side ---- */
+  #listMemberships,#listPasses,#listPT,#classList{display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #listMemberships>.grouphead,#listPT>.note,#classList>.note,
+  #listMemberships>.btn,#listPT>.btn,#classList>.btn{grid-column:1/-1}
+  #listMemberships .card,#listPasses .card,#listPT .card,#classList .block{margin-bottom:0}
+  #included .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #included #factList{grid-column:1/-1;margin-bottom:0}
+  #included .block{margin-bottom:0}
+  #visit .list{max-width:760px}
+  #connect .list{max-width:760px}
+
+  /* ---- faq in two columns ---- */
+  #faqList{column-count:2;column-gap:48px;max-width:1040px}
+  #guideList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #guideList .glink{margin-bottom:0}
+  .qa{break-inside:avoid;-webkit-column-break-inside:avoid}
+
+  /* ---- lightbox ---- */
+  #lb .lbstrip img{max-height:74dvh}
+  #lb .lbtop{padding:24px var(--pad) 14px}
+
+  /* ---- splash ---- */
+  #splash .core{width:380px;height:380px;max-width:380px;max-height:380px}
+  .wallrow{font-size:96px}
+}
+
+@media (min-width:1400px){
+  #app{margin-left:300px}
+  #rail{width:300px}
+  .hero .agile{font-size:124px}
+  .strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+a.mi,a.rmi{text-decoration:none}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "HealthAndBeautyBusiness",
+    "ExerciseGym"
+   ],
+   "@id": "https://www.gofitx.sg/#gym",
+   "name": "GoFit X Gym Geylang",
+   "alternateName": "GoFit X Geylang",
+   "description": "新加坡芽笼的24小时健身房。六层楼，其中五层是训练区，12,000平方尺，60多台器械（包括全套 Nautilus），免费团体课，免费停车。从阿裕尼地铁站走路10分钟。",
+   "url": "https://www.gofitx.sg/",
+   "image": [
+    "https://www.gofitx.sg/img/img-6095.jpg"
+   ],
+   "logo": "https://www.gofitx.sg/img/gofitx-logo.png",
+   "telephone": "+65 8877 9895",
+   "email": "geylang@gofit-gym.com.sg",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "22 Lorong 18 Geylang",
+    "addressLocality": "Singapore",
+    "postalCode": "398804",
+    "addressCountry": "SG"
+   },
+   "hasMap": "https://maps.app.goo.gl/QKkoupZCNJndmggbA",
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "00:00",
+     "closes": "23:59"
+    }
+   ],
+   "priceRange": "$$",
+   "currenciesAccepted": "SGD",
+   "paymentAccepted": "Cash, PayNow, Credit Card, Debit Card",
+   "publicAccess": true,
+   "isAccessibleForFree": false,
+   "sameAs": [
+    "https://www.facebook.com/gofitgym.geylang",
+    "https://www.instagram.com/gofitgym.geylang/",
+    "https://www.tiktok.com/@gofitgym.geylang"
+   ],
+   "amenityFeature": [
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "24/7 access",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Free parking",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Free group classes",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Showers",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Lockers",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "HydroMassage deep tissue loungers",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Evolt 360 body composition scanner",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Rooftop training area",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Physiotherapy clinic on site",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Personal training",
+     "value": true
+    }
+   ],
+   "makesOffer": [
+    {
+     "@type": "Offer",
+     "name": "Goal monthly membership",
+     "price": "98",
+     "priceCurrency": "SGD",
+     "description": "Rolling monthly membership on a 12-month minimum term."
+    },
+    {
+     "@type": "Offer",
+     "name": "1 month prepaid membership",
+     "price": "135",
+     "priceCurrency": "SGD"
+    },
+    {
+     "@type": "Offer",
+     "name": "3 month prepaid membership",
+     "price": "328",
+     "priceCurrency": "SGD"
+    },
+    {
+     "@type": "Offer",
+     "name": "6 month prepaid membership",
+     "price": "618",
+     "priceCurrency": "SGD"
+    },
+    {
+     "@type": "Offer",
+     "name": "12 month prepaid membership",
+     "price": "1068",
+     "priceCurrency": "SGD"
+    },
+    {
+     "@type": "Offer",
+     "name": "1 day visitor pass",
+     "price": "28",
+     "priceCurrency": "SGD"
+    },
+    {
+     "@type": "Offer",
+     "name": "7 day visitor pass",
+     "price": "100",
+     "priceCurrency": "SGD"
+    }
+   ],
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "Fitbiz Pte Ltd",
+    "identifier": {
+     "@type": "PropertyValue",
+     "name": "UEN",
+     "value": "202124878G"
+    }
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.gofitx.sg/#website",
+   "url": "https://www.gofitx.sg/zh/",
+   "name": "GoFit X Gym Geylang",
+   "publisher": {
+    "@id": "https://www.gofitx.sg/#gym"
+   },
+   "inLanguage": "zh-Hans-SG"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.gofitx.sg/zh/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "真的24小时开放吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "是的 — 一年到头，每天24小时。用免费的手机 App 开门，不用买门卡，也不怕弄丢。员工在场时间：平日下午2点到晚上10点，周六中午12点到傍晚6点。周日和公共假期没有员工，但会员照样能进来。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "加入前可以先参观吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "新加坡居民可以免费参观，还有一次免费体验，每人限一次 — 在 WhatsApp 上发信息给我们，约个时间。来新加坡旅游？直接买一天或一周的访客通更快。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "要多少钱？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "12个月预付配套每月$89起，Goal 合约每月$98。不想绑太久的话，也有1、3、6个月的预付配套。一日通$28。全部都不收入会费和门卡费。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有停车位吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "有 — 会员和访客训练期间都可以免费停车，就在楼下。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有淋浴和储物柜吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "每层楼都有完整的淋浴设施和储物柜。记得带自己的毛巾，没带的话可能不能进场。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "怎么过来？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "从阿裕尼地铁站走路10分钟，离巴耶利峇也只要几分钟。芽笼路巴士站走过来1分钟，巴士62、63、80、100和158都到。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有私人教练吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "有三位 — Jason、Amit 和 Xin。配套每小时$65起，还送一次 Evolt 360 身体成分扫描。想带自己客户来的教练，请发信息给我们。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Plus 升级是什么？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "任何会员每月加$15就能升级：所有 GoFit 分店都能去，Evolt 360 身体扫描无限次，可以用 HydroMassage 水疗按摩椅，还有专属储物柜。只能刷卡，提前一个月通知就能随时取消。详情看菜单 07。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "上课要钱吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不用钱。所有会员和访客通都包含团体课。少数由外部合作伙伴开的课可能要另外收费。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ DESKTOP RAIL (hidden below 900px) ============ -->
+<nav id="rail" aria-label="主菜单">
+  <button class="raillogo" data-go="home" aria-label="首页"><span id="lockRail"></span></button>
+  <div class="railmenu" id="railMenu"></div>
+  <div class="railcta">
+    <a class="btn pri" id="railWa"><span class="ico" data-ico="wa"></span><span class="lbl">WhatsApp 我们</span></a>
+    <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+      <span class="ico" data-ico="pin"></span><span class="lbl">怎么来</span></a>
+    <div class="railfoot">22 Lorong 18, Geylang<br>Singapore 398804<br><br>24小时开放<br><a class="langsw" href="../" lang="en" hreflang="en" data-lang="en">EN</a></div>
+  </div>
+</nav>
+
+<div id="app">
+
+  <!-- ============ HOME ============ -->
+  <section class="screen on" id="home">
+    <div class="ticker"><div id="tick"></div></div>
+    <div class="topbar">
+      <div class="lockup" id="lockHome"></div>
+      <div class="status" id="status"><span class="dot"></span><span id="statusText">营业中</span></div>
+      <a class="langsw" href="../" lang="en" hreflang="en" data-lang="en">EN</a>
+    </div>
+
+    <div class="hero">
+      <h1 class="agile" data-agile="想练就练"><span class="pre">想练就练</span></h1>
+      <p class="kick">芽笼的24小时健身房。五层训练区、12,000平方尺、60多台器械，还有免费课程和免费停车。从阿裕尼地铁站走路10分钟就到。</p>
+    </div>
+
+    <div class="proof">
+      <a href="https://maps.app.goo.gl/pnu243VLaqCcK7U76" target="_blank" rel="noopener">
+        <span class="big">4.9★</span><span class="lbl">120条评价</span></a>
+      <div><span class="big">4年</span><span class="lbl">芽笼前三名</span></div>
+      <div><span class="big">$89</span><span class="lbl">每月起</span></div>
+    </div>
+
+    <div class="acts">
+      <a class="btn pri" id="tourBtn" href="#">
+        <span class="ico" data-ico="wa"></span>
+        <span><span class="lbl">预约免费参观</span>
+        <span class="sub">WhatsApp 我们 — 有员工在时会回复你</span></span>
+        <span class="chev">→</span>
+      </a>
+      <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+        <span class="ico" data-ico="pin"></span>
+        <span><span class="lbl">导航过来</span>
+        <span class="sub">22 Lorong 18, Geylang, Singapore 398804</span></span>
+        <span class="chev">→</span>
+      </a>
+    </div>
+
+    <nav class="menu" id="menuItems"></nav>
+
+    <div class="foot">
+      GoFit X Gym Geylang · 22 Lorong 18, Singapore 398804<br>
+      <a href="mailto:geylang@gofit-gym.com.sg">geylang@gofit-gym.com.sg</a> ·
+      <a href="tel:+6588779895">+65 8877 9895</a><br><br>
+      © 2026 由 Fitbiz Pte Ltd 管理 · UEN 202124878G
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="screen" id="visit">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="来找我们"><span class="pre">来找我们</span></h2>
+      <p class="kick">随时都可以过来。大部分下午和晚上都有员工在 — 想参观的话，这个时间来最好。</p>
+    </div>
+    <div class="list">
+      <div class="block">
+        <span class="tagline">地址</span>
+        <h3>22 Lorong 18, Geylang</h3>
+        <div class="lines">Singapore 398804</div>
+        <p>从阿裕尼地铁站走路10分钟，离巴耶利峇也只要几分钟。芽笼路巴士站走过来1分钟 — 巴士62、63、80、100和158都到。会员可以在楼下免费停车。</p>
+        <div class="cta" style="margin-top:15px">
+          <a class="btn pri" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+            <span class="ico" data-ico="pin"></span><span class="lbl">用 Google 地图打开</span><span class="chev">→</span></a>
+        </div>
+      </div>
+
+      <div class="block">
+        <span class="tagline">时间</span>
+        <h3>全年无休，24小时开放</h3>
+        <div class="lines">
+          <b>员工在场时间</b><br>
+          周一至周五 &nbsp;下午2点 – 晚上10点<br>
+          周六 &nbsp;中午12点 – 傍晚6点<br>
+          周日和公共假期 — 没有员工值班
+        </div>
+        <p>没员工不代表关门。会员用免费 App 里的开门码，什么时候都能进来。</p>
+      </div>
+
+      <div class="note">
+        <span class="nh">新加坡居民</span>
+        <span class="nb">免费参观，加一次免费体验，每人限一次。发信息给我们，约个时间就行。</span>
+      </div>
+
+      <a class="btn pri" style="margin-bottom:12px" data-wa="你好 GoFit X，我想预约免费参观和体验。">
+        <span class="ico" data-ico="wa"></span><span class="lbl">WhatsApp +65 8877 9895</span><span class="chev">→</span></a>
+      <a class="btn sec" style="margin-bottom:12px" href="tel:+6588779895">
+        <span class="ico" data-ico="phone"></span><span class="lbl">打电话给我们</span><span class="chev">→</span></a>
+      <a class="btn sec" href="mailto:geylang@gofit-gym.com.sg?subject=Website%20enquiry">
+        <span class="ico" data-ico="mail"></span><span class="lbl">发邮件给我们</span><span class="chev">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ CLASSES ============ -->
+  <section class="screen" id="classes">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="免费课程"><span class="pre">免费课程</span></h2>
+      <p class="kick">所有会员和访客通都包含。屋顶 HIIT、身体律动、快速训练课，什么水平都欢迎。</p>
+    </div>
+    <div class="list" id="classList"></div>
+  </section>
+
+  <!-- ============ PLUS UPGRADE ============ -->
+  <section class="screen" id="plus">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="PLUS 升级"><span class="pre">PLUS 升级</span></h2>
+      <p class="kick">任何会员每月加$15，就多四项福利。提前一个月通知，随时可以取消。</p>
+    </div>
+    <div class="list" id="plusList"></div>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="screen" id="faq">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="常见问题"><span class="pre">常见问题</span></h2>
+      <p class="kick">找不到答案？发信息给我们 — 有员工在的时候，是真人回复你。</p>
+    </div>
+    <div class="list" id="faqList" style="margin-bottom:18px">
+      <div class="qa"><button><span class="q">真的24小时开放吗？</span><span class="pm">+</span></button><div class="a">是的 — 一年到头，每天24小时。用免费的手机 App 开门，不用买门卡，也不怕弄丢。员工在场时间：平日下午2点到晚上10点，周六中午12点到傍晚6点。周日和公共假期没有员工，但会员照样能进来。</div></div>
+      <div class="qa"><button><span class="q">加入前可以先参观吗？</span><span class="pm">+</span></button><div class="a">新加坡居民可以免费参观，还有一次免费体验，每人限一次 — 在 WhatsApp 上发信息给我们，约个时间。来新加坡旅游？直接买一天或一周的访客通更快。</div></div>
+      <div class="qa"><button><span class="q">要多少钱？</span><span class="pm">+</span></button><div class="a">12个月预付配套每月$89起，Goal 合约每月$98。不想绑太久的话，也有1、3、6个月的预付配套。一日通$28。全部都不收入会费和门卡费。</div></div>
+      <div class="qa"><button><span class="q">有停车位吗？</span><span class="pm">+</span></button><div class="a">有 — 会员和访客训练期间都可以免费停车，就在楼下。</div></div>
+      <div class="qa"><button><span class="q">有淋浴和储物柜吗？</span><span class="pm">+</span></button><div class="a">每层楼都有完整的淋浴设施和储物柜。记得带自己的毛巾，没带的话可能不能进场。</div></div>
+      <div class="qa"><button><span class="q">怎么过来？</span><span class="pm">+</span></button><div class="a">从阿裕尼地铁站走路10分钟，离巴耶利峇也只要几分钟。芽笼路巴士站走过来1分钟，巴士62、63、80、100和158都到。</div></div>
+      <div class="qa"><button><span class="q">有私人教练吗？</span><span class="pm">+</span></button><div class="a">有三位 — Jason、Amit 和 Xin。配套每小时$65起，还送一次 Evolt 360 身体成分扫描。想带自己客户来的教练，请发信息给我们。</div></div>
+      <div class="qa"><button><span class="q">Plus 升级是什么？</span><span class="pm">+</span></button><div class="a">任何会员每月加$15就能升级：所有 GoFit 分店都能去，Evolt 360 身体扫描无限次，可以用 HydroMassage 水疗按摩椅，还有专属储物柜。只能刷卡，提前一个月通知就能随时取消。详情看菜单 07。</div></div>
+      <div class="qa"><button><span class="q">上课要钱吗？</span><span class="pm">+</span></button><div class="a">不用钱。所有会员和访客通都包含团体课。少数由外部合作伙伴开的课可能要另外收费。</div></div>
+    </div>
+    <div class="list">
+      <a class="btn pri" data-wa="你好 GoFit X，我想问一下会员的事。">
+        <span class="ico" data-ico="wa"></span><span class="lbl">在 WhatsApp 上问我们</span><span class="chev">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ APP & SOCIALS ============ -->
+  <section class="screen" id="connect">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="APP 和社交媒体"><span class="pre">APP 和社交媒体</span></h2>
+      <p class="kick">开门码、课程预约和会员卡，全都在免费 App 里。课程时间变动和优惠，我们会在 TikTok 和 Instagram 上发。</p>
+    </div>
+    <div class="list" id="appList"></div>
+    <div class="list" style="margin-top:10px" id="socialList"></div>
+  </section>
+
+
+  <!-- ============ HOW TO GUIDES ============ -->
+  <section class="screen" id="guides">
+    <div class="sechead"><button class="back"><span class="arrow">←</span>菜单</button></div>
+    <div class="sectitle">
+      <h2 class="agile" data-agile="使用指南"><span class="pre">使用指南</span></h2>
+      <p class="kick">给会员的一步步教学 — 开通会员、续费，还有怎么进门。每个只要几分钟。</p>
+    </div>
+    <div class="list" id="guideList"></div>
+    <div class="list">
+      <a class="btn pri" data-wa="你好 GoFit X，我的会员需要帮忙。">
+        <span class="ico" data-ico="wa"></span><span class="lbl">卡住了？发信息给我们</span><span class="chev">→</span></a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ SPLASH — sound wall, shown once ============ -->
+<div id="splash" role="dialog" aria-label="Choose language · 选择语言">
+  <div class="wall" id="wall"></div>
+  <div class="core">
+    <div class="lockup" id="lockSplash"></div>
+  </div>
+  <div class="pick">
+    <div class="cue">选择语言 · CHOOSE LANGUAGE</div>
+    <div class="row">
+      <button type="button" class="lp" lang="en" data-lang="en">ENGLISH</button>
+      <button type="button" class="lp" lang="zh-Hans" data-lang="zh">中文</button>
+    </div>
+  </div>
+  <div class="ticker"><div id="splashTick"></div></div>
+</div>
+
+<!-- ============ STICKY ACTION BAR ============ -->
+<div id="actionbar">
+  <a class="btn pri" id="barWa"><span class="ico" data-ico="wa"></span><span class="lbl">WhatsApp 我们</span></a>
+  <a class="btn sec" href="https://maps.app.goo.gl/QKkoupZCNJndmggbA" target="_blank" rel="noopener">
+    <span class="ico" data-ico="pin"></span><span class="lbl">怎么来</span></a>
+</div>
+
+<!-- ============ T&C MODAL ============ -->
+<dialog id="modal" class="sheet" closedby="any" aria-labelledby="mTitle">
+    <div class="mhead">
+      <div class="mtitle" id="mTitle"></div>
+      <button type="button" class="mclose" id="mClose" autofocus>关闭 ✕</button>
+    </div>
+    <div class="mhours">员工在场：周一至周五 下午2点–晚上10点 · 周六 中午12点–傍晚6点</div>
+    <div class="mbody" id="mBody"></div>
+    <div class="mfoot">这是主要条款的简要说明，方便快速查看。它不能代替完整合约 — 如有不同，以你签的合约为准。</div>
+</dialog>
+
+<script>
+/* ================================================================
+   1. BRAND ASSETS
+   ================================================================ */
+var LOGO='../img/gofitx-logo.png';
+/* <source> tags for the AVIF/WebP siblings of a JPG/PNG; the original stays as the <img> fallback */
+function srcs(u){var b=u.replace(/\.(jpe?g|png)$/i,'');return '<source type="image/avif" srcset="'+b+'.avif">'+'<source type="image/webp" srcset="'+b+'.webp">';}
+
+var ICONS={
+  wa:'<svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.24.67-1.4 1.28-1.94 1.32-.5.04-1.13.06-1.82-.11a15 15 0 0 1-6.5-5.1c-.5-.7-.9-1.6-.9-2.5 0-.9.47-1.35.64-1.54.17-.19.38-.24.5-.24h.36c.12 0 .28-.04.44.34.16.4.56 1.37.6 1.47.05.1.08.22.01.35-.06.13-.1.21-.2.33l-.3.35c-.1.1-.2.21-.09.41.11.2.5.83 1.08 1.34.74.66 1.37.87 1.57.97.2.1.31.08.43-.05.11-.13.5-.58.63-.78.13-.2.26-.17.43-.1.18.06 1.13.53 1.32.63.2.1.32.14.37.22.05.09.05.5-.19 1.17Z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="currentColor" style="width:100%;height:100%"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>'
+};
+var GLYPH={
+  tiktok:'<svg viewBox="0 0 48 48" style="width:100%;height:100%"><path fill="#47D5CD" d="M31.6 4h-6.4v25.9a5.3 5.3 0 1 1-4.4-5.2v-6.5A11.7 11.7 0 1 0 31.6 30V16.4a12.9 12.9 0 0 0 8.1 2.7v-6.4a7.6 7.6 0 0 1-8.1-8.7z"/></svg>',
+  instagram:'<svg viewBox="0 0 48 48" style="width:100%;height:100%"><g fill="none" stroke="#FF536C" stroke-width="4"><rect x="6" y="6" width="36" height="36" rx="11"/><circle cx="24" cy="24" r="8.5"/></g><circle cx="34.5" cy="13.5" r="2.8" fill="#FF536C"/></svg>',
+  facebook:'<svg viewBox="0 0 48 48" style="width:100%;height:100%"><path fill="#0080BA" d="M44 24a20 20 0 1 0-23.1 19.8V29.8h-5.1V24h5.1v-4.4c0-5 3-7.8 7.6-7.8 2.2 0 4.5.4 4.5.4v5h-2.5c-2.5 0-3.2 1.5-3.2 3.1V24h5.5l-.9 5.8h-4.6v14A20 20 0 0 0 44 24Z"/></svg>',
+  app:'<svg viewBox="0 0 48 48" style="width:100%;height:100%"><path fill="#FCD900" d="M32.5 25.4c0-4.3 3.5-6.3 3.6-6.4-2-2.9-5-3.3-6.1-3.3-2.6-.3-5 1.5-6.3 1.5-1.3 0-3.3-1.5-5.4-1.4-2.8 0-5.3 1.6-6.7 4.1-2.9 5-.7 12.4 2.1 16.5 1.4 2 3 4.2 5.2 4.1 2.1-.1 2.9-1.3 5.4-1.3s3.2 1.3 5.4 1.3c2.2 0 3.6-2 5-4a17 17 0 0 0 2.2-4.6c-.1 0-4.4-1.7-4.4-6.5ZM28.4 12c1.1-1.4 1.9-3.3 1.7-5.2-1.7.1-3.7 1.1-4.9 2.5-1 1.2-2 3.2-1.7 5 1.9.2 3.8-.9 4.9-2.3Z"/></svg>',
+  play:'<svg viewBox="0 0 48 48" style="width:100%;height:100%"><path fill="#0080BA" d="M8 5.5v37c0 .9.5 1.6 1.2 1.9l21-20.4-21-20.4c-.7.3-1.2 1-1.2 1.9Z"/><path fill="#47D5CD" d="M37.6 21.2 32 18l-4.4 6 4.4 6 5.6-3.2c1.6-.9 1.6-3.7 0-4.6Z"/><path fill="#FCD900" d="M9.2 44.4c.5.2 1.2.2 1.9-.2L32 30l-4.4-6L9.2 44.4Z"/><path fill="#FF536C" d="M11.1 3.8c-.7-.4-1.4-.4-1.9-.2L27.6 24 32 18 11.1 3.8Z"/></svg>'
+};
+
+/* ================================================================
+   2. CONTENT — sourced from gofitx.sg. Edit here only.
+   ================================================================ */
+var WA_NUMBER='6588779895';
+var LINKS={
+  monthly:'https://evolutionwellness-sg.perfectgym.pl/ClientPortal2/Registration/Start?clubId=1&paymentPlanId=58&redirectUrl=https://www.gofit-gym.com/sg/thank-you-purchase/geylang/',
+  t1:'https://buy.stripe.com/fZufZj8d5dMG1WRd5t4c80F',
+  t3:'https://buy.stripe.com/cNi8wR1OH4c6cBv6H54c80G',
+  t6:'https://buy.stripe.com/cNi00l64XgYS6d73uT4c80K',
+  t12:'https://buy.stripe.com/bJe4gBbph4c60SN3uT4c80J',
+  day1:'https://evolutionwellness-sg.perfectgym.pl/clientportal2/registration/start?clubId=1&productID=4',
+  day7:'https://evolutionwellness-sg.perfectgym.pl/clientportal2/registration/start?clubId=1&productID=30&redirectUrl=https://www.gofit-gym.com/sg/thank-you-purchase/geylang/',
+  tiktok:'https://www.tiktok.com/@gofitgym.geylang',
+  instagram:'https://www.instagram.com/gofitgym.geylang/',
+  facebook:'https://www.facebook.com/gofitgym.geylang',
+  appStore:'https://apps.apple.com/sg/app/gofit-gym/id1484662884',
+  playStore:'https://play.google.com/store/apps/details?id=com.netpulse.mobile.evolutionwellness',
+  pt1:'https://buy.stripe.com/dR68zZ2727hr0Hm006',
+  pt3:'https://buy.stripe.com/28EeVf9h9gYScBv9Th4c80D',
+  pt5:'https://buy.stripe.com/3cseYnh1W31bdu8cMT',
+  pt10:'https://buy.stripe.com/14keYn5jegS1ahW7sA',
+  pt20:'https://buy.stripe.com/6oEg2r6niatDahW28h',
+  pt30:'https://buy.stripe.com/6oE4jJ7rm0T32Pu5kv'
+};
+function wa(msg){return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg);}
+
+var MENU=[
+  {id:'visit',n:'01',t:'来找我们',d:'地址、营业时间、免费参观'},
+  {id:'memberships',href:'/zh/our-membership-plans',n:'02',t:'会员配套',d:'每月$89起，免入会费'},
+  {id:'passes',href:'/zh/visitor-passes',n:'03',t:'访客通',d:'1天$28 · 7天$100'},
+  {id:'included',href:'/zh/our-equipments',n:'04',t:'你能得到什么',d:'五层训练区、60多台器械、恢复区'},
+  {id:'classes',n:'05',t:'免费课程',d:'屋顶 HIIT、Animal Flow 等等'},
+  {id:'pt',href:'/zh/personal-training',n:'06',t:'私人教练',d:'一对一指导，每小时$65起'},
+  {id:'plus',n:'07',t:'PLUS 升级',d:'全部分店、恢复区和储物柜 · 每月$15'},
+  {id:'faq',n:'08',t:'常见问题',d:'停车、淋浴、进门、体验'},
+  {id:'connect',n:'09',t:'APP 和社交媒体',d:'开门码随身带'},
+  {id:'guides',n:'10',t:'使用指南',d:'会员一步步教学'}
+];
+
+var GUIDES=[
+  {f:'mobile-app-tutorial.html',t:'GOFIT APP 教学',
+   d:'下载、登录，用手机开门。',n:6,m:'2分钟'},
+  {f:'guest-registration-tutorial.html',t:'免费体验登记',
+   d:'用我们发给你的邀请链接，登记免费体验。',n:7,m:'4分钟'},
+  {f:'plus-upgrade-tutorial.html',t:'升级到 PLUS',
+   d:'加上全部分店、Evolt 360、HydroMassage 和专属储物柜。',n:7,m:'3分钟'},
+  {f:'voucher-new-membership-activation.html',t:'新预付会员登记',
+   d:'用员工给你的代码开通会员。',n:11,m:'3分钟'},
+  {f:'voucher-membership-renewal.html',t:'预付会员续费',
+   d:'用员工给你的代码续费现有会员。',n:10,m:'3分钟'},
+  {f:'lazada-new-membership-activation.html',t:'LAZADA 购买的会员登记',
+   d:'开通你在 Lazada 上买的会员。',n:12,m:'3分钟'},
+  {f:'lazada-membership-renewal.html',t:'LAZADA 购买的会员续费',
+   d:'用 Lazada 上买的优惠券续费。',n:11,m:'3分钟'}
+];
+
+
+
+var CLASSES=[
+  {t:'SWEATY SUNSET',tag:'屋顶 HIIT · 45分钟 · 所有水平',
+   d:'我们的招牌户外课。徒手循环、高强度爆发和功能性训练，一边流汗一边看芽笼的日落。'},
+  {t:'ANIMAL FLOW',tag:'身体律动 · 所有水平 · 不用器材',
+   d:'在地上完成的动作训练，融合了瑜伽、体操、跑酷和霹雳舞。爬、跳、伸展，一套套连贯动作做下来，练协调也练控制力。'},
+  {t:'MONDAY MAX',tag:'HIIT · 60分钟 · GX 教室',
+   d:'有氧训练加力量循环，满满一小时。专为下班直接过来的你设计。'},
+  {t:'STRETCH',tag:'恢复 · 新手友好',
+   d:'有人带你做拉伸和活动度训练，适合恢复日、举铁之后，或者坐太久肩膀僵硬的时候。所有会员都包含。'},
+  {t:'HANDSTAND',tag:'中级 · 新课',
+   d:'一步步练平衡和肩部控制，最后做到独立倒立。'}
+];
+var PLUS=[
+  {k:'全部分店',t:'任何 GoFit 分店都能练',
+   d:'你的会员可以进芽笼店。升级 Plus 之后，新加坡所有 GoFit 分店都能去 — 公司附近、家附近，哪里方便就去哪里。'},
+  {k:'EVOLT 360',t:'身体成分扫描',
+   d:'在 L4 的 Evolt 360 上站不到一分钟，就能看到完整数据：肌肉量、体脂、内脏脂肪和基础代谢率。想扫几次就扫几次，体重秤看不出的进步，这里都看得到。'},
+  {k:'HYDROMASSAGE',t:'深层水疗按摩椅',
+   d:'全新加坡只有我们有 HydroMassage 水疗按摩椅，就在 L6 恢复区。扫码、穿着衣服躺下，让水柱帮你按背、肩膀和腿。十分钟，不用换衣服，也不用预约。'},
+  {k:'储物柜',t:'专属储物柜',
+   d:'一个只属于你的储物柜。鞋子、毛巾、腰带和备用衣服都可以放在健身房，不用每天带来带去。'}
+];
+var TCS={
+  plus:{title:'PLUS 升级条款',items:[
+    ['适用对象','Plus 可以加在任何有效的 GoFit X 会员上，月付合约或预付都可以。它是一份独立合约，跟你的会员一起运行，不会改变原来的会员。'],
+    ['付款','每月$15，每月1号从信用卡或借记卡扣款。不接受现金和 PayNow。第一次扣款只算你开始那个月剩下的天数。'],
+    ['取消','Plus 按月计算，最少一个日历月。随时可以取消，只要在上个月结束前，提前一个完整日历月通知我们。']
+  ]}
+};
+
+/* ================================================================
+   3. AGILE HEADLINES
+   Cindie Mono's A–F widths are emulated with Archivo's width axis.
+   Each line fills its measure by nudging every letter's width together
+   — the brand's own mechanism, not a horizontal scale.
+   ================================================================ */
+var RHYTHM=[62,74,110,120,86,68];
+var ZH=true;
+function setAgile(el){
+  var text=el.dataset.agile.replace(/&amp;/g,'&');
+  if(ZH){el.innerHTML='<span class="ln">'+text+'</span>';fitLine(el);return;}
+  el.innerHTML='<span class="ln" style="display:block">'+text.split('').map(function(ch,i){
+    return ch===' '?'<span style="--w:100"> </span>'
+                   :'<span style="--w:'+RHYTHM[i%RHYTHM.length]+'">'+ch+'</span>';
+  }).join('')+'</span>';
+  fitLine(el);
+}
+function fitLine(el){
+  var ln=el.querySelector('.ln'); if(!ln)return;
+  if(ZH){
+    el.style.fontSize='';
+    var tw=el.clientWidth-2; if(tw<40)return;
+    var base=parseFloat(getComputedStyle(el).fontSize),w=ln.getBoundingClientRect().width;
+    if(w)el.style.fontSize=Math.min(base*tw/w,base*1.35)+'px';
+    return;
+  }
+  var target=el.clientWidth-2;
+  if(target<40)return;
+  var spans=ln.querySelectorAll('span'),lo=-40,hi=40,best=-40;
+  function apply(d){
+    for(var i=0;i<spans.length;i++){
+      var base=parseFloat(spans[i].style.getPropertyValue('--w'))||100;
+      spans[i].style.fontVariationSettings="'wdth' "+Math.max(62,Math.min(125,base+d));
+    }
+  }
+  for(var s=0;s<14;s++){
+    var mid=(lo+hi)/2; apply(mid);
+    if(ln.getBoundingClientRect().width<target){lo=mid;best=mid;}else{hi=mid;}
+  }
+  apply(best);
+}
+function fitAll(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-agile]'),function(el){
+    if(el.querySelector('.ln'))fitLine(el);else setAgile(el);
+  });
+}
+
+/* ================================================================
+   4. BUILD
+   ================================================================ */
+function icon(k){return ICONS[k]||'';}
+function buyBtn(item){
+  return '<div class="cta"><a class="btn pri" href="'+item.url+'" target="_blank" rel="noopener">'+
+    '<span class="lbl">'+item.cta+'</span><span class="chev">→</span></a></div>';
+}
+function card(item){
+  return '<div class="card">'+
+    (item.flag?'<div class="flag">'+item.flag+'</div>':'')+
+    '<div class="row">'+
+      '<div class="roundel"><span class="cur">$</span><span class="amt">'+item.amt+'</span><span class="per">'+item.per+'</span></div>'+
+      '<div class="info"><div class="nm">'+item.nm+'</div><div class="meta">'+item.meta+'</div></div>'+
+    '</div>'+
+    buyBtn(item)+
+    (item.tc?'<button class="tc" data-tc="'+item.tc+'">查看条款</button>':'')+
+  '</div>';
+}
+
+
+
+document.getElementById('classList').innerHTML=CLASSES.map(function(c){
+  return '<div class="block"><span class="tagline">'+c.tag+'</span><h3>'+c.t+'</h3><p>'+c.d+'</p></div>';}).join('')+
+  '<div class="note"><span class="nh">课程时间表</span><span class="nb">课程时间每个月都会变。最新时间表在免费的 GoFit App 里，有变动我们也会在 Instagram 上发。</span></div>'+
+  '<a class="btn sec" data-wa="你好 GoFit X，这周有什么课？">'+
+  '<span class="ico">'+icon('wa')+'</span><span class="lbl">问问这周有什么课</span><span class="chev">→</span></a>';
+
+document.getElementById('plusList').innerHTML=
+  '<div class="card"><div class="flag">加购</div><div class="row">'+
+  '<div class="roundel"><span class="cur">$</span><span class="amt">15</span><span class="per">/月</span></div>'+
+  '<div class="info"><div class="nm">PLUS</div><div class="meta">适用于所有会员类型，月付或预付都可以。只接受信用卡或借记卡。</div></div></div>'+
+  '<div class="cta"><a class="btn pri" href="plus-upgrade-tutorial.html"><span class="lbl">3分钟完成升级</span><span class="chev">→</span></a></div>'+
+  '<button class="tc" data-tc="plus">查看条款</button></div>'+
+  '<div class="grouphead"><span class="gl">你能得到什么</span></div>'+
+  PLUS.map(function(f){return '<div class="block"><span class="tagline">'+f.k+'</span><h3>'+f.t+'</h3><p>'+f.d+'</p></div>';}).join('')+
+  '<div class="grouphead"><span class="gl">怎么运作</span></div>'+
+  '<div class="block"><div class="lines">'+
+  '<b>是加购，不是替换。</b>你的会员保持不变，Plus 是另一份合约，跟会员一起运行。<br>'+
+  '<b>刷卡付款。</b>每月从信用卡或借记卡扣款，不收现金或 PayNow。<br>'+
+  '<b>第一个月很公道。</b>第一次只收当月剩下的天数，之后每月1号扣$15。<br>'+
+  '<b>随时取消。</b>提前一个完整日历月通知就行。'+
+  '</div></div>'+
+  '<a class="btn sec" data-wa="你好 GoFit X，我想问一下 Plus 升级。">'+
+  '<span class="ico">'+icon('wa')+'</span><span class="lbl">有问题？问我们</span><span class="chev">→</span></a>';
+
+document.getElementById('appList').innerHTML=
+  '<a class="social app" href="'+LINKS.appStore+'" target="_blank" rel="noopener">'+
+  '<div class="glyph">'+GLYPH.app+'</div><div><div class="nm">APP STORE</div>'+
+  '<div class="handle">iPhone 和 iPad</div><div class="meta">开门码、课程预约和会员卡。</div></div>'+
+  '<div class="go">→</div></a>'+
+  '<a class="social play" href="'+LINKS.playStore+'" target="_blank" rel="noopener">'+
+  '<div class="glyph">'+GLYPH.play+'</div><div><div class="nm">GOOGLE PLAY</div>'+
+  '<div class="handle">Android</div><div class="meta">开门码、课程预约和会员卡。</div></div>'+
+  '<div class="go">→</div></a>';
+
+document.getElementById('socialList').innerHTML=
+  '<a class="social tiktok" href="'+LINKS.tiktok+'" target="_blank" rel="noopener">'+
+  '<div class="glyph">'+GLYPH.tiktok+'</div><div><div class="nm">TIKTOK</div>'+
+  '<div class="handle">@gofitgym.geylang</div><div class="meta">训练短片，还有凌晨3点健身房的样子。</div></div>'+
+  '<div class="go">→</div></a>'+
+  '<a class="social instagram" href="'+LINKS.instagram+'" target="_blank" rel="noopener">'+
+  '<div class="glyph">'+GLYPH.instagram+'</div><div><div class="nm">INSTAGRAM</div>'+
+  '<div class="handle">@gofitgym.geylang</div><div class="meta">课程表、优惠，还有会员的好成绩。</div></div>'+
+  '<div class="go">→</div></a>'+
+  '<a class="social facebook" href="'+LINKS.facebook+'" target="_blank" rel="noopener">'+
+  '<div class="glyph">'+GLYPH.facebook+'</div><div><div class="nm">FACEBOOK</div>'+
+  '<div class="handle">gofitgym.geylang</div><div class="meta">营业通知、活动，还有健身房里发生的大小事。</div></div>'+
+  '<div class="go">→</div></a>';
+
+document.getElementById('guideList').innerHTML=GUIDES.map(function(g,i){
+  return '<a class="glink" href="'+g.f+'">'+
+    '<span class="gn">'+String(i+1).padStart(2,'0')+'</span>'+
+    '<span class="gt">'+g.t+'<span class="gd">'+g.d+'</span>'+
+    '<span class="gm">'+g.n+' 步 · '+g.m+'</span></span>'+
+    '<span class="go">→</span></a>';}).join('');
+
+document.getElementById('menuItems').innerHTML=MENU.map(function(m){
+  var inner='<span class="n">'+m.n+'</span>'+
+    '<span class="t">'+m.t+'<span class="d">'+m.d+'</span></span><span class="go">→</span>';
+  return m.href?'<a class="mi" href="'+m.href+'">'+inner+'</a>'
+               :'<button class="mi" data-go="'+m.id+'">'+inner+'</button>';}).join('');
+
+document.getElementById('tick').innerHTML=(function(){
+  var t=['免入会费','可选无合约','芽笼三大健身房','免门卡费','24小时开放',
+         '12,000平方尺','免费停车','免费课程','每月$89起'];
+  var s=t.map(function(x){return '<span>'+x+'</span><span>•</span>';}).join('');
+  return s+s;})();
+
+document.getElementById('lockHome').innerHTML='<picture>'+srcs(LOGO)+'<img src="'+LOGO+'" alt="GoFit X Gym Geylang" width="545" height="680"></picture>';
+
+/* ================================================================
+   4b. SPLASH — sound wall. Shown once per visit, then not again
+   until the browser tab is closed. Swap sessionStorage for
+   localStorage to show it only once per visitor, ever.
+   ================================================================ */
+var SPLASH_KEY='gofitx.splashSeen';
+var splash=document.getElementById('splash');
+function splashSeen(){try{return sessionStorage.getItem(SPLASH_KEY)==='1';}catch(e){return false;}}
+function markSplashSeen(){try{sessionStorage.setItem(SPLASH_KEY,'1');}catch(e){}}
+
+(function buildWall(){
+  var WORDS=['BOOM','ZIP','OOMPH','POW','GO'],rows='';
+  for(var i=0;i<16;i++){
+    var line='';for(var j=0;j<10;j++)line+=WORDS[(i+j)%WORDS.length]+' ';
+    rows+='<div class="wallrow '+(i%2?'r':'l')+'"><span>'+line+line+'</span></div>';
+  }
+  document.getElementById('wall').innerHTML=rows;
+  document.getElementById('lockSplash').innerHTML='<picture>'+srcs(LOGO)+'<img src="'+LOGO+'" alt="GoFit X Gym Geylang" width="545" height="680"></picture>';
+  document.getElementById('splashTick').innerHTML=document.getElementById('tick').innerHTML;
+})();
+
+function dismissSplash(){
+  if(!splash)return;
+  markSplashSeen();
+  splash.classList.add('out');
+  document.body.style.overflow='';
+  setTimeout(function(){if(splash&&splash.parentNode)splash.parentNode.removeChild(splash);splash=null;},500);
+}
+function removeSplashNow(){
+  if(splash&&splash.parentNode)splash.parentNode.removeChild(splash);
+  splash=null;
+  document.body.style.overflow='';
+}
+/* language picker: same language closes the splash, the other one goes to that version */
+var LANG_KEY='gofitx.lang', PAGE_LANG='zh', OTHER_HREF='../';
+if(splash){
+  Array.prototype.forEach.call(splash.querySelectorAll('.lp'),function(b){
+    b.addEventListener('click',function(){
+      try{localStorage.setItem(LANG_KEY,b.dataset.lang);}catch(e){}
+      if(b.dataset.lang===PAGE_LANG){dismissSplash();}
+      else{markSplashSeen();location.href=OTHER_HREF;}
+    });
+  });
+}
+Array.prototype.forEach.call(document.querySelectorAll('.langsw'),function(a){
+  a.addEventListener('click',function(){try{localStorage.setItem(LANG_KEY,a.dataset.lang);}catch(e){}});
+});
+
+/* fill icon placeholders */
+Array.prototype.forEach.call(document.querySelectorAll('[data-ico]'),function(el){
+  el.innerHTML=icon(el.dataset.ico);});
+
+/* wire every WhatsApp link, with its own prefilled message */
+document.getElementById('tourBtn').href=wa("你好 GoFit X，我想预约免费参观和体验。");
+document.getElementById('barWa').href=wa("你好 GoFit X，我有个问题。");
+Array.prototype.forEach.call(document.querySelectorAll('[data-wa]'),function(el){
+  el.href=wa(el.dataset.wa);el.target='_blank';el.rel='noopener';});
+
+
+/* ================================================================
+   8. DESKTOP RAIL — same MENU data, same show() routing.
+   Inert on mobile: #rail is display:none below 900px.
+   ================================================================ */
+document.getElementById('railMenu').innerHTML=MENU.map(function(m){
+  var inner='<span class="n">'+m.n+'</span><span class="t">'+m.t+'</span>';
+  return m.href?'<a class="rmi" href="'+m.href+'" data-rail="'+m.id+'">'+inner+'</a>'
+               :'<button class="rmi" data-go="'+m.id+'" data-rail="'+m.id+'">'+inner+'</button>';}).join('');
+document.getElementById('lockRail').innerHTML='<picture>'+srcs(LOGO)+'<img src="'+LOGO+'" alt="GoFit X Gym Geylang" width="545" height="680"></picture>';
+document.getElementById('railWa').href=wa("你好 GoFit X，我有个问题。");
+document.getElementById('railWa').target='_blank';
+function syncRail(id){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-rail]'),function(b){
+    b.classList.toggle('on',b.dataset.rail===id);});
+}
+
+/* ================================================================
+   5. NAVIGATION — hash routed so the phone back button works
+   ================================================================ */
+var VALID={home:1,visit:1,classes:1,plus:1,faq:1,connect:1,guides:1};
+/* sections that moved to their own pages — old #links and bookmarks forward there */
+var MOVED={memberships:'/zh/our-membership-plans',passes:'/zh/visitor-passes',included:'/zh/our-equipments',pt:'/zh/personal-training'};
+var modal=document.getElementById('modal');
+
+function show(id,push){
+  if(MOVED[id]){location.replace(MOVED[id]);return;}
+  if(!VALID[id])id='home';
+  Array.prototype.forEach.call(document.querySelectorAll('.screen'),function(s){s.classList.remove('on');});
+  document.getElementById(id).classList.add('on');
+  window.scrollTo(0,0);
+  syncRail(id);
+  if(push!==false&&location.hash!=='#'+id)history.pushState({id:id},'','#'+id);
+  fitAll();
+}
+function closeModal(){if(modal.open)modal.close();}
+function openModal(key){
+  var t=TCS[key]; if(!t)return;
+  document.getElementById('mTitle').textContent=t.title;
+  document.getElementById('mBody').innerHTML=t.items.map(function(it){
+    return '<div class="mitem"><h4>'+it[0]+'</h4><p>'+it[1]+'</p></div>';}).join('');
+  document.getElementById('mBody').scrollTop=0;
+  if(!modal.open)modal.showModal();
+}
+
+/* Light-dismiss fallback where <dialog closedby> is unsupported (Safari). Tests the pointer position, not event.target, so taps on the sheet's own padding don't close it. */
+if(!('closedBy' in HTMLDialogElement.prototype)){
+  var outside=function(e,d){var r=d.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};
+  var pressedOut=false;
+  modal.addEventListener('pointerdown',function(e){pressedOut=outside(e,modal);});
+  modal.addEventListener('pointerup',function(e){if(pressedOut&&outside(e,modal))modal.close();});
+}
+document.addEventListener('click',function(e){
+  var mi=e.target.closest('[data-go]');
+  if(mi){show(mi.dataset.go);return;}
+  if(e.target.closest('.back')){show('home');return;}
+  var tc=e.target.closest('[data-tc]');
+  if(tc){openModal(tc.dataset.tc);return;}
+  if(e.target.closest('#mClose')){closeModal();return;}
+  var qa=e.target.closest('.qa button');
+  if(qa){qa.parentElement.classList.toggle('open');return;}
+});
+window.addEventListener('popstate',function(e){
+  closeModal();
+  show((e.state&&e.state.id)||location.hash.slice(1)||'home',false);
+});
+
+/* ================================================================
+   6. LIVE STATUS — staffed hours in Singapore time
+   ================================================================ */
+function sgNow(){
+  var d=new Date();
+  return new Date(d.getTime()+(d.getTimezoneOffset()*60000)+(8*3600000));
+}
+function updateStatus(){
+  var n=sgNow(),day=n.getDay(),h=n.getHours()+n.getMinutes()/60,staffed=false;
+  if(day>=1&&day<=5)staffed=(h>=14&&h<22);
+  else if(day===6)staffed=(h>=12&&h<18);
+  document.getElementById('statusText').textContent=staffed?'营业中 · 有员工':'营业中 · 无人值班';
+}
+
+/* ================================================================
+   7. INIT
+   ================================================================ */
+function init(){
+  if(splashSeen())removeSplashNow();
+  else document.body.style.overflow='hidden';
+  fitAll();
+  updateStatus();
+  setInterval(updateStatus,60000);
+  var start=location.hash.slice(1)||'home';
+  show(start,false);
+  history.replaceState({id:start},'','#'+start);
+}
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fitAll,120);});
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(init);}else{window.addEventListener('load',init);}
+</script>
+</body>
+</html>

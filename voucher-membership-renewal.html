@@ -8,6 +8,9 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://www.gofitx.sg/voucher-membership-renewal">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gofitx.sg/zh/voucher-membership-renewal">
+<link rel="alternate" hreflang="x-default" href="https://www.gofitx.sg/voucher-membership-renewal">
 <link rel="canonical" href="https://www.gofitx.sg/voucher-membership-renewal">
 <meta name="description" content="GoFit member guide — not for public listing.">
 <meta name="theme-color" content="#000000">
@@ -138,6 +141,14 @@ body{background:#000;color:#fff;font-family:var(--body);min-height:100dvh;overfl
   .nav{display:flex}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- language toggle ---------- */
+.langsw{flex:none;color:var(--yellow)!important;border:1.5px solid var(--yellow);border-radius:99px;
+  padding:7px 12px;font:800 12px/1 var(--body)!important;letter-spacing:.08em!important;text-decoration:none}
+.langsw[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif!important;letter-spacing:.12em!important}
+.sechead{display:flex;align-items:center}
+.sechead .langsw,.crumb .langsw{margin-left:auto}
+.railfoot .langsw{display:inline-block;margin-top:14px}
 </style>
 </head>
 <body>
@@ -147,7 +158,7 @@ body{background:#000;color:#fff;font-family:var(--body);min-height:100dvh;overfl
   <div class="ghead">
     <div class="crumb">
       <a href="index.html#guides">← GoFit X</a>
-      <span class="lockup"></span>
+      <span class="lockup"></span><a class="langsw" href="/zh/voucher-membership-renewal" lang="zh-Hans" hreflang="zh-Hans">中文</a>
     </div>
     <div class="agile gtitle">TERM MEMBERSHIP RENEWAL</div>
     <div class="gmeta" id="gmeta"></div>

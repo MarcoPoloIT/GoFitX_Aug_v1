@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Xin — Personal Trainer · GoFit X Gym Geylang</title>
 <meta name="description" content="Xin — mobility, hand balancing and general fitness personal trainer at GoFit X Gym Geylang, Singapore. Book 1-to-1 coaching.">
+<link rel="alternate" hreflang="en" href="https://www.gofitx.sg/pt-xin">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gofitx.sg/zh/pt-xin">
+<link rel="alternate" hreflang="x-default" href="https://www.gofitx.sg/pt-xin">
 <link rel="canonical" href="https://www.gofitx.sg/pt-xin">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
@@ -123,12 +126,20 @@ body{background:#000;color:#fff;font-family:var(--body);min-height:100dvh;overfl
 .foot{padding:30px var(--pad) 0;font:500 12.5px/1.6 var(--body);color:rgba(255,255,255,.4)}
 .foot a{color:rgba(255,255,255,.55)}
 @media (min-width:900px){:root{--pad:40px}#app{max-width:760px}.agile{font-size:96px}}
+
+/* ---------- language toggle ---------- */
+.langsw{flex:none;color:var(--yellow)!important;border:1.5px solid var(--yellow);border-radius:99px;
+  padding:7px 12px;font:800 12px/1 var(--body)!important;letter-spacing:.08em!important;text-decoration:none}
+.langsw[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif!important;letter-spacing:.12em!important}
+.sechead{display:flex;align-items:center}
+.sechead .langsw,.crumb .langsw{margin-left:auto}
+.railfoot .langsw{display:inline-block;margin-top:14px}
 </style>
 </head>
 <body>
 <div id="app">
   <div class="ghead">
-    <div class="crumb"><a href="/personal-training">← Personal training</a><span class="lockup"><picture><source type="image/avif" srcset="img/gofitx-logo.avif"><source type="image/webp" srcset="img/gofitx-logo.webp"><img src="img/gofitx-logo.png" alt="GoFit X Gym Geylang" width="545" height="680"></picture></span></div>
+    <div class="crumb"><a href="/personal-training">← Personal training</a><span class="lockup"><picture><source type="image/avif" srcset="img/gofitx-logo.avif"><source type="image/webp" srcset="img/gofitx-logo.webp"><img src="img/gofitx-logo.png" alt="GoFit X Gym Geylang" width="545" height="680"></picture></span><a class="langsw" href="/zh/pt-xin" lang="zh-Hans" hreflang="zh-Hans">中文</a></div>
     <div class="kicker">X-Pert coach · GoFit X Geylang</div>
     <h1 class="agile">Xin</h1>
     <p class="focus">Mobility, hand balancing and general fitness</p>

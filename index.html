@@ -352,6 +352,16 @@ body{background:#000;color:#fff;font-family:var(--body);
   font-size:17px;letter-spacing:.2em}
 #splash .lp:hover{background:#fff}
 #splash .lp:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+/* splash v2: bigger logo, quieter language buttons */
+#splash .core{width:84vw;height:84vw;max-width:400px;max-height:400px}
+#splash .lockup{width:62%;margin-top:-4%}
+#splash .core{box-shadow:0 0 0 26px #000,0 0 110px 70px rgba(0,0,0,.97)}
+#splash .pick{margin-top:-14px;padding:8px;gap:0;border-radius:99px;box-shadow:0 0 40px 24px rgba(0,0,0,.95)}
+#splash .pick .row{gap:8px}
+#splash .lp{background:transparent;color:var(--yellow);border:1.5px solid var(--yellow);
+  min-width:92px;padding:10px 16px;font:700 12px/1 var(--body);letter-spacing:.14em}
+#splash .lp[lang|=zh]{font-size:13px;letter-spacing:.18em}
+#splash .lp:hover{background:var(--yellow);color:#000}
 .langsw{flex:none;color:var(--yellow);border:1.5px solid var(--yellow);border-radius:99px;
   padding:7px 12px;font:800 12px/1 var(--body);letter-spacing:.08em;text-decoration:none}
 .langsw[lang|=zh]{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:.12em}
@@ -467,7 +477,7 @@ body{background:#000;color:#fff;font-family:var(--body);
   #lb .lbtop{padding:24px var(--pad) 14px}
 
   /* ---- splash ---- */
-  #splash .core{width:380px;height:380px;max-width:380px;max-height:380px}
+  #splash .core{width:460px;height:460px;max-width:460px;max-height:460px}
   .wallrow{font-size:96px}
 }
 
@@ -923,7 +933,6 @@ a.mi,a.rmi{text-decoration:none}
     <div class="lockup" id="lockSplash"></div>
   </div>
   <div class="pick">
-    <div class="cue">CHOOSE LANGUAGE · 选择语言</div>
     <div class="row">
       <button type="button" class="lp" lang="en" data-lang="en">ENGLISH</button>
       <button type="button" class="lp" lang="zh-Hans" data-lang="zh">中文</button>
